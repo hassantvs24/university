@@ -28,16 +28,15 @@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed page-loading">
 <!--begin::Main-->
-@include('include.mobile-header')
+@include('include.no-aside-mobile-header')
 <div class="d-flex flex-column flex-root">
     <!--begin::Page-->
     <div class="d-flex flex-row flex-column-fluid page">
-        @include('include.aside')
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-            @include('include.header')
+            @include('include.no-aside-header')
             <!--begin::Content-->
             <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                 @include('include.sub-header')
