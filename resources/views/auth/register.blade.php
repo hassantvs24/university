@@ -1,60 +1,77 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+@extends('layouts.app')
 
-        <x-jet-validation-errors class="mb-4" />
+@section('content')
 
-        <form method="POST" action="{{ route('register') }}">
+    <!--begin::Signin-->
+    <div class="login-form">
+        <!--begin::Form-->
+        <form class="form" id="kt_login_singin_form" action="{{ route('register') }}" method="POST">
             @csrf
-
-            <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <!--begin::Title-->
+            <div class="pb-5 pb-lg-15">
+                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">{{__('Create Account')}}</h3>
+                <div class="text-muted font-weight-bold font-size-h4">Already have an Account ?
+                    <a href="{{ route('login') }}" class="text-primary font-weight-bolder">{{__('Sign In')}}</a></div>
             </div>
+            <!--end::Title-->
 
-            <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            <!--begin::Form group-->
+            <div class="form-group">
+                <x-jet-label for="name" class="font-size-h6 font-weight-bolder text-dark" req="true" value="{{ __('Name') }}" />
+                <x-jet-input id="name" class="form-control-solid h-auto py-7 px-6 rounded-lg border-0" type="text" name="name" :value="old('name')" required autofocus  autocomplete="name" />
+                @if ($errors->has('name'))
+                    <span class="form-text text-danger">{{ $errors->first('name') }}</span>
+                @endif
             </div>
+            <!--end::Form group-->
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+            <!--begin::Form group-->
+            <div class="form-group">
+                <x-jet-label for="email" class="font-size-h6 font-weight-bolder text-dark" req="true" value="{{ __('Email') }}" />
+                <x-jet-input id="email" class="form-control-solid h-auto py-7 px-6 rounded-lg border-0" type="email" name="email" :value="old('email')" required />
+                @if ($errors->has('email'))
+                    <span class="form-text text-danger">{{ $errors->first('email') }}</span>
+                @endif
             </div>
+            <!--end::Form group-->
 
-            <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <!--begin::Form group-->
+            <div class="form-group">
+                <x-jet-label for="password" class="font-size-h6 font-weight-bolder text-dark" req="true" value="{{ __('Password') }}" />
+                <x-jet-input id="password" class="form-control-solid h-auto py-7 px-6 rounded-lg border-0" type="password" name="password" required autocomplete="new-password" />
+                @if ($errors->has('password'))
+                    <span class="form-text text-danger">{{ $errors->first('password') }}</span>
+                @endif
             </div>
+            <!--end::Form group-->
+
+            <!--begin::Form group-->
+            <div class="form-group">
+                <x-jet-label for="password_confirmation" class="font-size-h6 font-weight-bolder text-dark" req="true" value="{{ __('Password Confirmation') }}" />
+                <x-jet-input id="password_confirmation" class="form-control-solid h-auto py-7 px-6 rounded-lg border-0" type="password" name="password_confirmation" required autocomplete="new-password" />
+            </div>
+            <!--end::Form group-->
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-jet-label for="terms">
-                        <div class="flex items-center">
-                            <x-jet-checkbox name="terms" id="terms"/>
-
-                            <div class="ml-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Privacy Policy').'</a>',
-                                ]) !!}
-                            </div>
-                        </div>
-                    </x-jet-label>
-                </div>
+            <!--begin::Form group-->
+            <div class="form-group">
+                <label class="font-size-h6 font-weight-bolder text-dark">
+                    <input type="checkbox" name="terms"/>
+                    <span></span>
+                    {{ __('I agree to the privacy_policy') }}
+                </label>
+            </div>
+            <!--end::Form group-->
             @endif
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-jet-button class="ml-4">
-                    {{ __('Register') }}
-                </x-jet-button>
+            <!--begin::Action-->
+            <div class="pb-lg-0 pb-5">
+                <button type="submit" id="kt_login_singin_form_submit_button" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Register</button>
             </div>
+            <!--end::Action-->
         </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+        <!--end::Form-->
+    </div>
+    <!--end::Signin-->
+
+@endsection

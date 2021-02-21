@@ -1,5 +1,5 @@
-@props(['value'])
+@props(['value', 'req'])
 
-<label {{ $attributes->merge(['class' => 'block font-medium text-sm text-gray-700']) }}>
-    {{ $value ?? $slot }}
+<label {{ $attributes->merge(['class' => '']) }}>
+    {{ $value ?? $slot }} {!!  isset($req) ? '<span class="text-danger">*</span>':''!!}
 </label>

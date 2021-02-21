@@ -40,7 +40,7 @@
             @include('include.header')
             <!--begin::Content-->
             <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                @include('include.sub-header')
+{{--                @include('include.sub-header')--}}
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
