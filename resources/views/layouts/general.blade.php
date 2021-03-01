@@ -28,7 +28,7 @@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed page-loading">
+<body id="kt_body" class="header-fixed header-mobile-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 <!--begin::Main-->
 @include('include.no-aside-mobile-header')
 <div class="d-flex flex-column flex-root">
@@ -36,7 +36,6 @@
     <div class="d-flex flex-row flex-column-fluid page">
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-            @include('include.no-aside-header')
             <!--begin::Content-->
             <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                 @include('include.sub-header')
@@ -69,14 +68,6 @@
 <script src="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
 <script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
 <!--end::Global Theme Bundle-->
-<!--begin::Page Vendors(used by this page)-->
-<script src="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
-<!--<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM"></script>-->
-<script src="{{asset('assets/plugins/custom/gmaps/gmaps.js')}}"></script>
-<!--end::Page Vendors-->
-<!--begin::Page Scripts(used by this page)-->
-<script src="{{asset('assets/js/pages/widgets.js')}}"></script>
-<!--end::Page Scripts-->
 </body>
 <!--end::Body-->
 </html>

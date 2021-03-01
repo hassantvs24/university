@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('title')
-    {{__('Dashboard')}}
+    {{__('Purchase Orders')}}
 @endsection
 
 @section('content')
-    Dashboard
+    Orders
 @endsection

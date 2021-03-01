@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('title')
-    {{__('Dashboard')}}
+    {{__('Teachers List')}}
 @endsection
 
 @section('content')
-    Dashboard
+    Teachers
 @endsection

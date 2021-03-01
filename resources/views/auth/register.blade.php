@@ -10,7 +10,7 @@
             <!--begin::Title-->
             <div class="pb-5 pb-lg-15">
                 <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">{{__('Create Account')}}</h3>
-                <div class="text-muted font-weight-bold font-size-h4">Already have an Account ?
+                <div class="text-muted font-weight-bold font-size-h4">{{__('Already have an Account ?')}}
                     <a href="{{ route('login') }}" class="text-primary font-weight-bolder">{{__('Sign In')}}</a></div>
             </div>
             <!--end::Title-->
@@ -66,7 +66,8 @@
 
             <!--begin::Action-->
             <div class="pb-lg-0 pb-5">
-                <button type="submit" id="kt_login_singin_form_submit_button" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Register</button>
+                <button type="submit" id="kt_login_singin_form_submit_button" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">{{__('Register')}}</button>
+                <a href="{{route('login')}}" id="kt_login_forgot_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">{{__('Cancel')}}</a>
             </div>
             <!--end::Action-->
         </form>

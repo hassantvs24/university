@@ -7,7 +7,7 @@
         <form class="form" id="kt_login_forgot_form" method="POST" action="{{ route('password.confirm') }}">
             <!--begin::Title-->
             <div class="pb-5 pb-lg-15">
-                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Confirm Password ?</h3>
+                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">{{ __('Confirm Password ?') }}</h3>
                 <p class="text-muted font-weight-bold font-size-h4">{{ __('This is a secure area of the application. Please confirm your password before continuing.') }}</p>
             </div>
             <!--end::Title-->

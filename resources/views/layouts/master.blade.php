@@ -3,16 +3,13 @@
 <!--begin::Head-->
 <head><base href="../../">
     <meta charset="utf-8" />
-    <title>University | IFS</title>
+    <title>@yield('title')</title>
     <meta name="description" content="Page with empty content" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="canonical" href="https://keenthemes.com/metronic" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
-    <!--begin::Page Vendors Styles(used by this page)-->
-    <link href="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
-    <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
     <link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
@@ -25,10 +22,14 @@
     <link href="{{asset('assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}" />
+
+    <link href="{{asset('custom.css')}}" rel="stylesheet" type="text/css" />
+
+    @yield('style')
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+<body id="kt_body" class="header-fixed header-mobile-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 <!--begin::Main-->
 @include('include.mobile-header')
 <div class="d-flex flex-column flex-root">
@@ -40,7 +41,6 @@
             @include('include.header')
             <!--begin::Content-->
             <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-{{--                @include('include.sub-header')--}}
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
@@ -48,6 +48,7 @@
 
                         @yield('content')
 
+                        @yield('box')
                     </div>
                     <!--end::Container-->
                 </div>
@@ -60,6 +61,11 @@
     </div>
     <!--end::Page-->
 </div>
+<form id="delForm" method="post" style="display: none;">
+    @csrf
+    @method('DELETE')
+
+</form>
 <!--end::Main-->
 @include('include.right-panel')
 <!--begin::Global Config(global config for global JS scripts)-->
@@ -70,14 +76,73 @@
 <script src="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
 <script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
 <!--end::Global Theme Bundle-->
-<!--begin::Page Vendors(used by this page)-->
-<script src="{{asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
-<!--<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM"></script>-->
-<script src="{{asset('assets/plugins/custom/gmaps/gmaps.js')}}"></script>
-<!--end::Page Vendors-->
-<!--begin::Page Scripts(used by this page)-->
-<script src="{{asset('assets/js/pages/widgets.js')}}"></script>
-<!--end::Page Scripts-->
+<script type="text/javascript">
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+</script>
+
+<!-- Global Notification System: Using for common notification -->
+
+@if(Session::has('message'))
+    <script type="text/javascript">
+        toastr.{{Session::get('type')}}("{{Session::get('message')}}");
+    </script>
+@endif
+
+
+@if ($errors->any())
+    @foreach ($errors->all() as $error)
+    <script type="text/javascript">
+        toastr.error("{{$error}}");
+    </script>
+    @endforeach
+@endif
+
+<!-- /Global Notification System: Using for common notification -->
+
+<script type="text/javascript">
+    /**
+     *  Global Delete Function: using for all type of delete operation
+     */
+    function delFn(e){
+        var link = e.getAttribute('data-href');
+
+        $('#delForm').attr('action', link);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You wont be able to revert this!",
+        icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true
+        }).then(function(result) {
+                if (result.value) {
+                    $('#delForm').submit();
+                }
+            });
+        }
+    /**
+     *  /Global Delete Function: using for all type of delete operation
+     */
+</script>
+@yield('script')
 </body>
 <!--end::Body-->
 </html>
