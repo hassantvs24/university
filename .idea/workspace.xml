@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +17,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -213,9 +211,9 @@
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="537" />
-    <option name="y" value="225" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="396" />
+    <option name="y" value="-19" />
     <option name="width" value="1936" />
     <option name="height" value="1100" />
   </component>
@@ -230,17 +228,6 @@
             <path>
               <item name="university" type="b2602c69:ProjectViewProjectNode" />
               <item name="university" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="university" type="b2602c69:ProjectViewProjectNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="university" type="b2602c69:ProjectViewProjectNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="university" type="b2602c69:ProjectViewProjectNode" />
@@ -308,17 +295,18 @@
       <workItem from="1613887125676" duration="7730000" />
       <workItem from="1614616108229" duration="2058000" />
       <workItem from="1614668668746" duration="19000" />
-      <workItem from="1615103741970" duration="5023000" />
+      <workItem from="1615103741970" duration="5597000" />
+      <workItem from="1615130554702" duration="594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35463000" />
+    <option name="totallyTimeSpent" value="36631000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="537" y="225" width="1936" height="1100" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
