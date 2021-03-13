@@ -15,6 +15,7 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->comment('Academic Year')->unique();
             $table->softDeletes();
             $table->timestamps();
         });

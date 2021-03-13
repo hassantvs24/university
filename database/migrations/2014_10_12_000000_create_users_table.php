@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->enum('user_type', ['Student', 'Teacher', 'Admin'])->default('Student');
             $table->foreignId('current_team_id')->nullable();
-            $table->text('profile_photo_path')->nullable();
+            $table->text('photo')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
