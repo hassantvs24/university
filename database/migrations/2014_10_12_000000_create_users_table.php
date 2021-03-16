@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->enum('user_type', ['Student', 'Teacher', 'Admin'])->default('Student');
+            $table->enum('user_type', ['Student', 'Teacher', 'Stuff', 'Admin'])->default('Student');
             $table->foreignId('current_team_id')->nullable();
             $table->text('photo')->nullable();
             $table->softDeletes();
