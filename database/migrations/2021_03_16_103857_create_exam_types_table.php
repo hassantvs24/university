@@ -15,6 +15,9 @@ class CreateExamTypesTable extends Migration
     {
         Schema::create('exam_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();//'Final', 'Mid', 'Test'
+            $table->tinyInteger('mark')->default(0)->comment('Max mark');
+            $table->foreignId('batche_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

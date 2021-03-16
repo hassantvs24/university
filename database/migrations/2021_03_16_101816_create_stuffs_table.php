@@ -16,7 +16,7 @@ class CreateStuffsTable extends Migration
         Schema::create('stuffs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('user_categorie_id')->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('user_categorie_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('user_id')->unique()->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();

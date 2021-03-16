@@ -15,6 +15,9 @@ class CreateAccountBooksTable extends Migration
     {
         Schema::create('account_books', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->string('account')->nullable()->comment('Account number');
+            $table->string('description')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

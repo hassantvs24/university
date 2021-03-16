@@ -15,8 +15,9 @@ class CreateCourseItemsTable extends Migration
     {
         Schema::create('course_items', function (Blueprint $table) {
             $table->id();
-            $table->string('credit');
-            $table->foreignId('dependency')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
+            $table->tinyInteger('semester_level')->comment('Level of semester');
+            $table->float('credit')->default(0);
+            $table->foreignId('dependency')->nullable()->constrained('subjects')->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('subject_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->foreignId('course_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();

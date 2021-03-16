@@ -20,56 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/AcademicYear.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/AccountBook.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/CourseItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Department.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Designation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ExamResult.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ExamType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Examination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Faculty.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/FeeType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PaymentCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PaymentMethod.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Registration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/RegistrationType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Semester.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Stuff.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Subject.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/SubjectCategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/SubjectType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Teacher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserCategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Waver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072314_create_academic_years_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072315_create_faculties_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072452_create_subject_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072453_create_subject_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072504_create_subjects_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072734_create_semesters_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075003_create_courses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075136_create_course_items_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101527_create_designations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101634_create_wavers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101646_create_user_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101717_create_teachers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101816_create_stuffs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102910_create_fee_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_registration_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102912_create_registrations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_103857_create_exam_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_103904_create_examinations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_103928_create_exam_results_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_104723_create_payment_methods_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_104747_create_account_books_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_104812_create_payment_collections_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/CourseRegistration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Section.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_fees_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102913_create_course_registrations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_171838_create_payments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ExamResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Expense.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PaymentCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Fees.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Semester.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Batch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072314_create_academic_years_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072314_create_academic_years_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072504_create_subjects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072504_create_subjects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072734_create_semesters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_171816_create_expenses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_075003_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075003_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_075136_create_course_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075136_create_course_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101634_create_wavers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101634_create_wavers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_102910_create_fee_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102910_create_fee_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_registration_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_registration_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_102912_create_registrations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102912_create_registrations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_103857_create_exam_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_103857_create_exam_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_103904_create_examinations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_103904_create_examinations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_103928_create_exam_results_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072317_create_batches_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_104723_create_payment_methods_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_104723_create_payment_methods_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_104747_create_account_books_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_104747_create_account_books_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_104812_create_payment_collections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072318_create_sections_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +259,7 @@
       <workItem from="1615624210755" duration="604000" />
       <workItem from="1615633134992" duration="39000" />
       <workItem from="1615799285823" duration="1958000" />
-      <workItem from="1615877280550" duration="12769000" />
+      <workItem from="1615877280550" duration="25772000" />
     </task>
     <servers />
   </component>

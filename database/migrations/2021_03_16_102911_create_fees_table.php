@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateExamResultsTable extends Migration
+class CreateFeesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,15 @@ class CreateExamResultsTable extends Migration
      */
     public function up()
     {
-        Schema::create('exam_results', function (Blueprint $table) {
+        Schema::create('fees', function (Blueprint $table) {
             $table->id();
+            $table->string('amount');
+            $table->foreignId('fee_type_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
+            $table->foreignId('academic_year_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->unique(['fee_type_id', 'academic_year_id']);
         });
     }
 
@@ -27,6 +32,6 @@ class CreateExamResultsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exam_results');
+        Schema::dropIfExists('fees');
     }
 }

@@ -13,9 +13,10 @@ class CreateFeeTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('fee_types', function (Blueprint $table) {
+        Schema::create('fee_types', function (Blueprint $table) {//Common fees of the all batch
             $table->id();
             $table->string('name')->unique();
+            $table->boolean('is_apply')->default(0)->comment('0=not apply on registration');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -15,11 +15,11 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique();
+            $table->string('code',30)->unique();
             $table->string('name');
             $table->string('description')->nullable();
-            $table->foreignId('subject_type_id')->constrained()->onDelete('Set Null')->onUpdate('No Action');
-            $table->foreignId('subject_categorie_id')->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('subject_type_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('subject_categorie_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

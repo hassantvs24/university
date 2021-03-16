@@ -15,9 +15,12 @@ class CreateAcademicYearsTable extends Migration
     {
         Schema::create('academic_years', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
+            $table->string('name');
+            $table->year('years')->comment('Using Current Year');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->unique(['name', 'years']);
         });
     }
 
