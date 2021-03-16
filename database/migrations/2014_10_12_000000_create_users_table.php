@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->enum('user_type', ['Student', 'Teacher', 'Stuff', 'Admin'])->default('Student');
             $table->foreignId('current_team_id')->nullable();
             $table->text('photo')->nullable();
+            $table->enum('institute', ['University', 'Diploma'])->default('University');
             $table->softDeletes();
             $table->timestamps();
         });
