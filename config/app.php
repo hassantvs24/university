@@ -183,6 +183,8 @@ return [
 
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
+        Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
+
     ],
 
     /*
