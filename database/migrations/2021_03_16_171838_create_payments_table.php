@@ -22,6 +22,8 @@ class CreatePaymentsTable extends Migration
             $table->foreignId('registration_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('fee_type_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('account_book_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('payment_method_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

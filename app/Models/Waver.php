@@ -2,10 +2,28 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property integer $id
+ * @property string $name
+ * @property float $amount
+ * @property string $deleted_at
+ * @property string $created_at
+ * @property string $updated_at
+ */
 class Waver extends Model
 {
-    use HasFactory;
+    /**
+     * The "type" of the auto-incrementing ID.
+     * 
+     * @var string
+     */
+    protected $keyType = 'integer';
+
+    /**
+     * @var array
+     */
+    protected $fillable = ['name', 'amount', 'deleted_at', 'created_at', 'updated_at'];
+
 }

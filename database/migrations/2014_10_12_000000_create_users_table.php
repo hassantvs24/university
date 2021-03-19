@@ -22,8 +22,9 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->enum('user_type', ['Student', 'Teacher', 'Stuff', 'Admin'])->default('Student');
             $table->foreignId('current_team_id')->nullable();
-            $table->text('photo')->nullable();
+            $table->string('photo')->default('/uploads/profile/default.jpg');
             $table->enum('institute', ['University', 'Diploma'])->default('University');
+            $table->enum('enroll', ['Manual', 'Online'])->default('Online');
             $table->softDeletes();
             $table->timestamps();
         });
