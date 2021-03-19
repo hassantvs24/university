@@ -18,10 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });*/
 
+Route::middleware(['auth', 'student'])->group(function () {
+    Route::get('/', [MainController::class, 'index'])->name('student.dashboard');
+});
 
 
-Route::get('/', [MainController::class, 'index'])->name('dashboard');
-
+Route::prefix('admin')->group(function () {
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::get('/', [MainController::class, 'index'])->name('admin.dashboard');
+    });
+});
 /*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
