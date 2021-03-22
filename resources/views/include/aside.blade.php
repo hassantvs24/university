@@ -45,39 +45,285 @@
                 </li>
                 <!--/Divider-->
 
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="#" class="menu-link">
+
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-open-text-book"></i>
-                        <span class="menu-text">{{__('Subject')}}</span>
+                        <span class="menu-text">{{__('Course')}}</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Course')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Course Info')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Course Category')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Subjects')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Subject Category')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="#" class="menu-link">
-                        <i class="menu-icon flaticon2-box-1"></i>
-                        <span class="menu-text">{{__('Packages')}}</span>
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon2-gift"></i>
+                        <span class="menu-text">{{__('Examination')}}</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Examination')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Exam Info')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Exam Types')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="#" class="menu-link">
-                        <i class="menu-icon flaticon-bag"></i>
-                        <span class="menu-text">{{__('Purchase Order')}}</span>
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon-security"></i>
+                        <span class="menu-text">{{__('Registrations')}}</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Registrations')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Registrations Info')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Registrations Type')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon2-avatar"></i>
+                        <span class="menu-text">{{__('Students')}}</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Students')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Student Info')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Student Category')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="#" class="menu-link">
-                        <i class="menu-icon flaticon-businesswoman"></i>
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon-user-settings"></i>
                         <span class="menu-text">{{__('Teachers')}}</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Teachers')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Teacher Info')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Teacher Category')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="#" class="menu-link">
-                        <i class="menu-icon flaticon-customer"></i>
-                        <span class="menu-text">{{__('Student')}}</span>
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon-rotate"></i>
+                        <span class="menu-text">{{__('Faculty')}}</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Faculty')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Faculty Info')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Staff')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Staff Category')}}</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon2-infographic"></i>
+                        <span class="menu-text">{{__('Accounts')}}</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Accounts')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Accounts Book')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Payments Methods')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Fees')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Fees Types')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
 
@@ -115,11 +361,96 @@
                     </div>
                 </li>
 
-                <li class="menu-item" aria-haspopup="true">
-                    <a href="" class="menu-link">
-                        <i class="menu-icon flaticon2-settings"></i>
-                        <span class="menu-text">{{__('Reports')}}</span>
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon-interface-7"></i>
+                        <span class="menu-text">{{__('Settings')}}</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Settings')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('University Setup')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Academic year')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Department')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Designations')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Waver')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon2-chart"></i>
+                        <span class="menu-text">{{__('Reports')}}</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">{{__('Account Reports')}}</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Students Reports')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Exam Result')}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
             </ul>
