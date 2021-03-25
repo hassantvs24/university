@@ -163,7 +163,7 @@
                         </ul>
                     </div>
                 </li>
-                
+
                 <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-avatar"></i>
@@ -361,7 +361,7 @@
                     </div>
                 </li>
 
-                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                <li class="menu-item menu-item-submenu {{ (request()->is('admin/settings*')) ? 'menu-item-open menu-item-here' : '' }}" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon-interface-7"></i>
                         <span class="menu-text">{{__('Settings')}}</span>
@@ -383,16 +383,16 @@
                                     <span class="menu-text">{{__('University Setup')}}</span>
                                 </a>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('year.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('year.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
                                     <span class="menu-text">{{__('Academic year')}}</span>
                                 </a>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('department.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('department.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>

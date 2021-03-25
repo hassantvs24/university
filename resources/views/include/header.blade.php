@@ -379,7 +379,7 @@
 {{--                                                <i class="flaticon2-pin text-primary"></i>--}}
 {{--                                            </div>--}}
 {{--                                            <div class="navi-text">--}}
-{{--                                                <div class="font-weight-bold">New customer is registered</div>--}}
+{{--                                                <div class="font-weight-bold">New Custom is registered</div>--}}
 {{--                                                <div class="text-muted">3 hrs ago</div>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}
@@ -496,7 +496,7 @@
 {{--                                                <i class="flaticon-security text-warning"></i>--}}
 {{--                                            </div>--}}
 {{--                                            <div class="navi-text">--}}
-{{--                                                <div class="font-weight-bold">New customer comment recieved</div>--}}
+{{--                                                <div class="font-weight-bold">New Custom comment recieved</div>--}}
 {{--                                                <div class="text-muted">2 days ago</div>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}
@@ -509,7 +509,7 @@
 {{--                                                <i class="flaticon2-analytics-1 text-success"></i>--}}
 {{--                                            </div>--}}
 {{--                                            <div class="navi-text">--}}
-{{--                                                <div class="font-weight-bold">New customer is registered</div>--}}
+{{--                                                <div class="font-weight-bold">New Custom is registered</div>--}}
 {{--                                                <div class="text-muted">3 days ago</div>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}

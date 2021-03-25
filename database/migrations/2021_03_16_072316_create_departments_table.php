@@ -17,6 +17,7 @@ class CreateDepartmentsTable extends Migration
             $table->id();
             $table->tinyInteger('code');
             $table->string('name');
+            $table->string('short_name',10);
             $table->softDeletes();
             $table->timestamps();
 

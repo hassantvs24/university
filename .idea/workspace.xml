@@ -20,38 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Accounts/AccountBookController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Accounts/FeesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Accounts/FeesTypeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Accounts/PaymentMethodController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectTypeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Exam/ExamController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Exam/ExamTypeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Registration/RegistrationCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Registration/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Reports/ExpenseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Reports/IncomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/AcademicYearController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/DepartmentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/DesignationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/FacultiesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/SettingsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/WaversController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/BatchController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/SectionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Stuff/StuffCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Stuff/StuffController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/RolesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Custom/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/naz.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/box/department.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/box/year.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/department.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/year.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/AcademicYearController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/AcademicYearController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/DepartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/DepartmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/AcademicYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AcademicYear.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Models/AcademicYear.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/crud/ktdatatable/advanced/column-rendering.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/crud/ktdatatable/advanced/column-rendering.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/contacts/list-datatable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/contacts/list-datatable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/add-project.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/add-project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/list-datatable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/list-datatable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/user/list-datatable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/user/list-datatable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/modals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/modals.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,16 +59,6 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Aside</find>
-      <find>content</find>
-      <find>begin::Content</find>
-      <find>Sales Stat</find>
-      <find>Empty Page</find>
-      <find>end::Main</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -226,18 +214,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Intranet-app" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\university\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\university\resources\views\settings\box" />
+      <recent name="D:\laragon\www\university\public" />
       <recent name="C:\wamp64\www\university\resources\views\vendor\jetstream\components" />
       <recent name="C:\wamp64\www\university\resources\views\layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\university\app\Customer" />
+      <recent name="D:\laragon\www\university\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -280,6 +272,10 @@
       <workItem from="1616137629073" duration="5065000" />
       <workItem from="1616437891545" duration="1307000" />
       <workItem from="1616441262342" duration="3347000" />
+      <workItem from="1616480666555" duration="503000" />
+      <workItem from="1616565896587" duration="903000" />
+      <workItem from="1616566818671" duration="14178000" />
+      <workItem from="1616589982046" duration="11000" />
     </task>
     <servers />
   </component>
@@ -302,13 +298,25 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1616153764797">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616587161966">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616153764797" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1616442187645">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616587161966" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1616589991715">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616442187645" />
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616589991715" />
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1616584061885">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616584061885" />
+    <state x="461" y="170" key="SettingsEditor" timestamp="1616566513319">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616566513319" />
+    <state x="616" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1616571152359">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="178" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616571152359" />
   </component>
 </project>

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
  * @property integer $id
@@ -18,9 +19,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class AcademicYear extends Model
 {
+    use LogsActivity;
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';

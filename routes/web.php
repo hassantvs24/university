@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\Settings\AcademicYearController;
+use App\Http\Controllers\Settings\DepartmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,12 +22,16 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'student'])->group(function () {
     Route::get('/', [MainController::class, 'index'])->name('student.dashboard');
+
 });
 
 
 Route::prefix('admin')->group(function () {
     Route::middleware(['auth', 'admin'])->group(function () {
         Route::get('/', [MainController::class, 'index'])->name('admin.dashboard');
+
+        Route::resource('/settings/year', AcademicYearController::class);
+        Route::resource('/settings/department', DepartmentController::class);
     });
 });
 /*

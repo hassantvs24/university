@@ -7,3 +7,9 @@
 @section('content')
     Dashboard
 @endsection
+
+@section('script')
+    <script type="text/javascript">
+
+    </script>
+@endsection

@@ -110,7 +110,7 @@ var KTProjectsAdd = function () {
 					customername: {
 						validators: {
 							notEmpty: {
-								message: 'Customer name is required'
+								message: 'Custom name is required'
 							}
 						}
 					},

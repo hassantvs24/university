@@ -52,7 +52,7 @@ var KTAppsProjectsListDatatable = function() {
                 }
             }, {
                 field: 'OrderID',
-                title: 'Customer',
+                title: 'Custom',
                 width: 250,
                 template: function(data) {
                     var number = KTUtil.getRandomInt(1, 10);
