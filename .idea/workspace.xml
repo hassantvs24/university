@@ -20,36 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Custom/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/naz.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/settings/box/department.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/settings/box/year.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/settings/department.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/settings/year.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/AcademicYearController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/AcademicYearController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/DepartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/DepartmentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/AcademicYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AcademicYear.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/Models/AcademicYear.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/crud/ktdatatable/advanced/column-rendering.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/crud/ktdatatable/advanced/column-rendering.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/contacts/list-datatable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/contacts/list-datatable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/add-project.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/add-project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/list-datatable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/projects/list-datatable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/custom/user/list-datatable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/pages/custom/user/list-datatable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/modals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/modals.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app_old.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app_old.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +189,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Intranet-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -276,6 +251,7 @@
       <workItem from="1616565896587" duration="903000" />
       <workItem from="1616566818671" duration="14178000" />
       <workItem from="1616589982046" duration="11000" />
+      <workItem from="1616787919169" duration="76000" />
     </task>
     <servers />
   </component>
