@@ -20,11 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app_old.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app_old.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseCategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/box/subject.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/box/subject_category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/box/subject_type.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/course.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/course_category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/subject.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/subject_category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/subject_type.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectTypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectTypeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/students.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,6 +264,8 @@
       <workItem from="1616566818671" duration="14178000" />
       <workItem from="1616589982046" duration="11000" />
       <workItem from="1616787919169" duration="76000" />
+      <workItem from="1616832165324" duration="1471000" />
+      <workItem from="1616836523286" duration="9490000" />
     </task>
     <servers />
   </component>
@@ -274,18 +288,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616587161966">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616846168685">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616587161966" />
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616846168685" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1616589991715">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616589991715" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1616584061885">
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1616841062651">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616584061885" />
+    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616841062651" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1616566513319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

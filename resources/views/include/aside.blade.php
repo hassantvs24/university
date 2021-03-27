@@ -46,7 +46,7 @@
                 <!--/Divider-->
 
 
-                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                <li class="menu-item menu-item-submenu {{ (request()->is('admin/course*')) ? 'menu-item-open menu-item-here' : '' }}" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-open-text-book"></i>
                         <span class="menu-text">{{__('Course')}}</span>
@@ -60,36 +60,44 @@
                                     <span class="menu-text">{{__('Course')}}</span>
                                 </span>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('course.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('course.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
                                     <span class="menu-text">{{__('Course Info')}}</span>
                                 </a>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('course.category.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('course.category.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
                                     <span class="menu-text">{{__('Course Category')}}</span>
                                 </a>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('subject.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('subject.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
                                     <span class="menu-text">{{__('Subjects')}}</span>
                                 </a>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('subject.category.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('subject.category.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
                                     <span class="menu-text">{{__('Subject Category')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{request()->routeIs('subject.type.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('subject.type.index')}}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Subject Type')}}</span>
                                 </a>
                             </li>
                         </ul>

@@ -17,13 +17,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property SubjectCategory $subjectCategory
  * @property SubjectType $subjectType
  * @property CourseItem[] $courseItems
- * @property CourseItem[] $courseItems
  */
 class Subject extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -52,7 +51,7 @@ class Subject extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function courseItems()
+    public function courseItemsDependency()
     {
         return $this->hasMany('App\Models\CourseItem', 'dependency');
     }
