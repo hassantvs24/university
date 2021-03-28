@@ -16,6 +16,7 @@ class CreateRegistrationTypesTable extends Migration
         Schema::create('registration_types', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();//'Regular', 'Improved', 'Retake'
+            $table->enum('types', ['Course', 'Improved', 'Retake', 'General']);
             $table->boolean('is_course')->default(1)->comment('1 = Course Registration & 0 = not');
             $table->boolean('is_waver')->default(1)->comment('1 = Waver applicable & 0 = not');
             $table->softDeletes();
