@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
+ * @property Student[] $students
  */
 class Waver extends Model
 {
@@ -26,4 +27,11 @@ class Waver extends Model
      */
     protected $fillable = ['name', 'amount', 'deleted_at', 'created_at', 'updated_at'];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function students()
+    {
+        return $this->hasMany('App\Models\Student');
+    }
 }

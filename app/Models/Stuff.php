@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property integer $id
  * @property integer $designation_id
- * @property integer $user_categorie_id
+ * @property integer $user_categories_id
  * @property integer $user_id
  * @property string $name
  * @property string $contact
@@ -24,6 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $district
  * @property string $sub_district
  * @property string $country
+ * @property string $status
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
@@ -43,7 +44,7 @@ class Stuff extends Model
     /**
      * @var array
      */
-    protected $fillable = ['designation_id', 'user_categorie_id', 'user_id', 'name', 'contact', 'emergency_contact', 'gender', 'dob', 'joining_date', 'nid', 'blood_group', 'address', 'city', 'zip', 'state', 'district', 'sub_district', 'country', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['designation_id', 'user_categories_id', 'user_id', 'name', 'contact', 'emergency_contact', 'gender', 'dob', 'joining_date', 'nid', 'blood_group', 'address', 'city', 'zip', 'state', 'district', 'sub_district', 'country', 'status', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -58,7 +59,7 @@ class Stuff extends Model
      */
     public function userCategory()
     {
-        return $this->belongsTo('App\Models\UserCategory', 'user_categorie_id');
+        return $this->belongsTo('App\Models\UserCategory', 'user_categories_id');
     }
 
     /**

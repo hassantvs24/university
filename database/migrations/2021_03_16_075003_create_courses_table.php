@@ -15,12 +15,10 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->foreignId('batche_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
+            $table->string('name')->unique();
+            $table->enum('status', ['Active', 'Inactive'])->default('Active');
             $table->softDeletes();
             $table->timestamps();
-
-            $table->unique(['name', 'batche_id']);
         });
     }
 

@@ -16,7 +16,7 @@ class CreateFeeTypesTable extends Migration
         Schema::create('fee_types', function (Blueprint $table) {//Common fees of the all batch
             $table->id();
             $table->string('name')->unique();
-            $table->boolean('is_apply')->default(0)->comment('0=not apply on registration');
+            $table->boolean('auto_apply')->default(0)->comment('0=not apply on course registration');
             $table->softDeletes();
             $table->timestamps();
         });

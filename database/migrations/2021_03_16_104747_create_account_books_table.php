@@ -18,6 +18,8 @@ class CreateAccountBooksTable extends Migration
             $table->string('name')->unique();
             $table->string('account')->nullable()->comment('Account number');
             $table->string('description')->nullable();
+            $table->enum('status', ['Active', 'Inactive'])->default('Active');
+            $table->foreignId('user_id')->comment('Authorize Stuff')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

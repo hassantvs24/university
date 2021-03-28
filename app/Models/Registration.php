@@ -7,25 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property integer $id
  * @property integer $registration_type_id
- * @property integer $academic_year_id
  * @property integer $section_id
- * @property integer $batche_id
+ * @property integer $batches_id
  * @property integer $teacher
- * @property integer $stuff
+ * @property integer $exam_controller
+ * @property integer $accountant
+ * @property integer $register
  * @property integer $user_id
- * @property boolean $semester_level
  * @property string $status
  * @property string $notes
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
- * @property AcademicYear $academicYear
+ * @property User $user
  * @property Batch $batch
  * @property RegistrationType $registrationType
  * @property Section $section
- * @property User $user
- * @property User $user
- * @property User $user
  * @property CourseRegistration[] $courseRegistrations
  * @property Examination[] $examinations
  * @property Payment[] $payments
@@ -34,7 +31,7 @@ class Registration extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -42,14 +39,14 @@ class Registration extends Model
     /**
      * @var array
      */
-    protected $fillable = ['registration_type_id', 'academic_year_id', 'section_id', 'batche_id', 'teacher', 'stuff', 'user_id', 'semester_level', 'status', 'notes', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['registration_type_id', 'section_id', 'batches_id', 'teacher', 'exam_controller', 'accountant', 'register', 'user_id', 'status', 'notes', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function academicYear()
+    public function accounts()
     {
-        return $this->belongsTo('App\Models\AcademicYear');
+        return $this->belongsTo('App\Models\User', 'accountant');
     }
 
     /**
@@ -57,7 +54,23 @@ class Registration extends Model
      */
     public function batch()
     {
-        return $this->belongsTo('App\Models\Batch', 'batche_id');
+        return $this->belongsTo('App\Models\Batch', 'batches_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function examController()
+    {
+        return $this->belongsTo('App\Models\User', 'exam_controller');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function registers()
+    {
+        return $this->belongsTo('App\Models\User', 'register');
     }
 
     /**
@@ -79,15 +92,7 @@ class Registration extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User', 'stuff');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user()
+    public function teachers()
     {
         return $this->belongsTo('App\Models\User', 'teacher');
     }

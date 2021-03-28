@@ -18,10 +18,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $updated_at
  * @property AcademicYear $academicYear
  * @property Department $department
- * @property Course[] $courses
- * @property ExamType[] $examTypes
  * @property Registration[] $registrations
  * @property Section[] $sections
+ * @property Student[] $students
  */
 class Batch extends Model
 {
@@ -56,25 +55,9 @@ class Batch extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function courses()
-    {
-        return $this->hasMany('App\Models\Course', 'batche_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function examTypes()
-    {
-        return $this->hasMany('App\Models\ExamType', 'batche_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
     public function registrations()
     {
-        return $this->hasMany('App\Models\Registration', 'batche_id');
+        return $this->hasMany('App\Models\Registration', 'batches_id');
     }
 
     /**
@@ -82,6 +65,14 @@ class Batch extends Model
      */
     public function sections()
     {
-        return $this->hasMany('App\Models\Section', 'batche_id');
+        return $this->hasMany('App\Models\Section', 'batches_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function students()
+    {
+        return $this->hasMany('App\Models\Student', 'batches_id');
     }
 }

@@ -30,8 +30,9 @@ class CreateStuffsTable extends Migration
             $table->string('district')->nullable();
             $table->string('sub_district')->nullable();
             $table->string('country')->default('Bangladesh')->nullable();
+            $table->enum('status',['Active', 'Inactive'])->default('Active');
             $table->foreignId('designation_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
-            $table->foreignId('user_categorie_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('user_categories_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('user_id')->unique()->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();

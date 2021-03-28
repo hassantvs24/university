@@ -5,7 +5,7 @@
     @endphp
 
     <label for="{{$set_id}}">{{$label}} {!! isset($required) ? '<span class="text-danger">*</span>':'' !!}</label>
-    <select id="{{$set_id}}" name="{{$name ?? ''}}" {{ $attributes->merge(['class' => 'form-control']) }} placeholder="{{$label}}"{{isset($required) ? 'required':''}} >
+    <select id="{{$set_id}}" name="{{$name ?? ''}}" {{ $attributes->merge(['class' => 'form-control']) }} {{isset($required) ? 'required':''}} >
         {{$slot}}
     </select>
 

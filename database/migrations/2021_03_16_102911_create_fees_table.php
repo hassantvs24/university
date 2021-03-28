@@ -15,13 +15,14 @@ class CreateFeesTable extends Migration
     {
         Schema::create('fees', function (Blueprint $table) {
             $table->id();
-            $table->string('amount');
+            $table->string('name');
+            $table->double('amount');
+            $table->enum('status', ['Active', 'Inactive']);
             $table->foreignId('fee_type_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
-            $table->foreignId('academic_year_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
 
-            $table->unique(['fee_type_id', 'academic_year_id']);
+            $table->unique(['name', 'amount']);
         });
     }
 

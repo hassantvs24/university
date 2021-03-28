@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
- * @property integer $user_categorie_id
+ * @property integer $user_categories_id
  * @property integer $course_id
- * @property integer $department_id
- * @property integer $academic_year_id
+ * @property integer $section_id
+ * @property integer $waver_id
+ * @property integer $batches_id
  * @property integer $user_id
+ * @property integer $upload_by
  * @property string $student_id
  * @property string $contact
  * @property string $emergency_contact
@@ -73,20 +75,22 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $doc_two_file
  * @property string $doc_three_title
  * @property string $doc_three_file
+ * @property string $status
+ * @property string $register_type
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
- * @property AcademicYear $academicYear
+ * @property Batch $batch
  * @property Course $course
- * @property Department $department
- * @property UserCategory $userCategory
+ * @property Section $section
  * @property User $user
+ * @property UserCategory $userCategory
  */
 class Student extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -94,14 +98,14 @@ class Student extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_categorie_id', 'course_id', 'department_id', 'academic_year_id', 'user_id', 'student_id', 'contact', 'emergency_contact', 'name', 'dob', 'gender', 'blood_group', 'religion', 'height', 'weight', 'nid', 'waver', 'waver_name', 'father_name', 'father_contact', 'father_email', 'father_occupation', 'father_nid', 'father_photo', 'mother_name', 'mother_contact', 'mother_email', 'mother_occupation', 'mother_nid', 'mother_photo', 'guardian_name', 'guardian_contact', 'guardian_email', 'guardian_occupation', 'guardian_nid', 'guardian_photo', 'address', 'city', 'zip', 'state', 'district', 'sub_district', 'country', 'ssc_roll', 'ssc_reg', 'ssc_year', 'ssc_division', 'ssc_point', 'ssc_grade', 'ssc_certificate', 'ssc_mark_sheet', 'ssc_testimonial', 'hsc_roll', 'hsc_reg', 'hsc_year', 'hsc_division', 'hsc_point', 'hsc_grade', 'hsc_certificate', 'hsc_mark_sheet', 'hsc_testimonial', 'doc_one_title', 'doc_one_file', 'doc_two_title', 'doc_two_file', 'doc_three_title', 'doc_three_file', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['user_categories_id', 'course_id', 'section_id', 'waver_id', 'batches_id', 'user_id', 'upload_by', 'student_id', 'contact', 'emergency_contact', 'name', 'dob', 'gender', 'blood_group', 'religion', 'height', 'weight', 'nid', 'waver', 'waver_name', 'father_name', 'father_contact', 'father_email', 'father_occupation', 'father_nid', 'father_photo', 'mother_name', 'mother_contact', 'mother_email', 'mother_occupation', 'mother_nid', 'mother_photo', 'guardian_name', 'guardian_contact', 'guardian_email', 'guardian_occupation', 'guardian_nid', 'guardian_photo', 'address', 'city', 'zip', 'state', 'district', 'sub_district', 'country', 'ssc_roll', 'ssc_reg', 'ssc_year', 'ssc_division', 'ssc_point', 'ssc_grade', 'ssc_certificate', 'ssc_mark_sheet', 'ssc_testimonial', 'hsc_roll', 'hsc_reg', 'hsc_year', 'hsc_division', 'hsc_point', 'hsc_grade', 'hsc_certificate', 'hsc_mark_sheet', 'hsc_testimonial', 'doc_one_title', 'doc_one_file', 'doc_two_title', 'doc_two_file', 'doc_three_title', 'doc_three_file', 'status', 'register_type', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function academicYear()
+    public function batch()
     {
-        return $this->belongsTo('App\Models\AcademicYear');
+        return $this->belongsTo('App\Models\Batch', 'batches_id');
     }
 
     /**
@@ -115,9 +119,17 @@ class Student extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function department()
+    public function section()
     {
-        return $this->belongsTo('App\Models\Department');
+        return $this->belongsTo('App\Models\Section');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function uploader()
+    {
+        return $this->belongsTo('App\Models\User', 'upload_by');
     }
 
     /**
@@ -125,7 +137,7 @@ class Student extends Model
      */
     public function userCategory()
     {
-        return $this->belongsTo('App\Models\UserCategory', 'user_categorie_id');
+        return $this->belongsTo('App\Models\UserCategory', 'user_categories_id');
     }
 
     /**
@@ -134,5 +146,13 @@ class Student extends Model
     public function user()
     {
         return $this->belongsTo('App\Models\User');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function waver()
+    {
+        return $this->belongsTo('App\Models\Waver');
     }
 }

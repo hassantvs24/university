@@ -15,7 +15,7 @@ class CreateBatchesTable extends Migration
     {
         Schema::create('batches', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('code')->unique();
+            $table->tinyInteger('code');
             $table->string('name')->comment('Display batch name Ex: 1st');
             $table->tinyInteger('semester')->default(0)->comment('Number of semester');
             $table->integer('credit')->default(0)->comment('Total Credit hour');
@@ -25,7 +25,7 @@ class CreateBatchesTable extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->unique(['name', 'department_id']);
+            $table->unique(['code', 'name', 'department_id']);
         });
     }
 

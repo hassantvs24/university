@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\Course\CourseCategoryController;
 use App\Http\Controllers\Course\CourseController;
 use App\Http\Controllers\Course\SubjectCategoryController;
 use App\Http\Controllers\Course\SubjectsController;
 use App\Http\Controllers\Course\SubjectTypeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Settings\AcademicYearController;
+use App\Http\Controllers\Settings\BatchController;
 use App\Http\Controllers\Settings\DepartmentController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,11 +39,11 @@ Route::prefix('admin')->group(function () {
         Route::resource('/course/subject/type', SubjectTypeController::class, ['as' => 'subject']);
         Route::resource('/course/subject', SubjectsController::class);
 
-        Route::resource('/course/category', CourseCategoryController::class, ['as' => 'course']);
         Route::resource('/course', CourseController::class);
 
         Route::resource('/settings/year', AcademicYearController::class);
         Route::resource('/settings/department', DepartmentController::class);
+        Route::resource('/settings/batch', BatchController::class);
     });
 });
 /*

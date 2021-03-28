@@ -20,22 +20,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/box/subject.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/box/subject_category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/box/subject_type.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/course.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/course_category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/subject.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/subject_category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/subject_type.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/nselect2.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/batch.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/box/batch.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectTypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectTypeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseCategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/BatchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/BatchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/SectionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/AccountBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AccountBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Batch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Batch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Department.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ExamType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ExamType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Examination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Examination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Expense.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Expense.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/FeeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/FeeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Fees.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Fees.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PaymentMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PaymentMethod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Stuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Stuff.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SubjectCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SubjectCategories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SubjectType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Teacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Teacher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Waver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Waver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072316_create_departments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072317_create_batches_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075137_create_batches_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072318_create_sections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075138_create_sections_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072453_create_subject_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072453_create_subject_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072504_create_subjects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072504_create_subjects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_075003_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075003_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101634_create_wavers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101634_create_wavers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101717_create_teachers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101717_create_teachers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101816_create_stuffs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101816_create_stuffs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_102910_create_fee_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102910_create_fee_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_fees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_fees_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_102912_create_registrations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102912_create_registrations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_103857_create_exam_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_103857_create_exam_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_103904_create_examinations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_103904_create_examinations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_104723_create_payment_methods_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_104723_create_payment_methods_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_104747_create_account_books_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_104747_create_account_books_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_171816_create_expenses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_171816_create_expenses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_171838_create_payments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_171838_create_payments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/nselect.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/nselect.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/box/subject.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/box/subject.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/subject.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/subject.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/students.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -266,6 +303,8 @@
       <workItem from="1616787919169" duration="76000" />
       <workItem from="1616832165324" duration="1471000" />
       <workItem from="1616836523286" duration="9490000" />
+      <workItem from="1616906690804" duration="17746000" />
+      <workItem from="1616949215327" duration="4128000" />
     </task>
     <servers />
   </component>
@@ -288,22 +327,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616846168685">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616921166515">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616846168685" />
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616921166515" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1616589991715">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616589991715" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1616841062651">
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1616917115366">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616841062651" />
+    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616917115366" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1616566513319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616566513319" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1616929430225">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616929430225" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1616928678585">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616928678585" />
     <state x="616" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1616571152359">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

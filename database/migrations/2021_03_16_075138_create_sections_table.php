@@ -15,12 +15,12 @@ class CreateSectionsTable extends Migration
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->comment('Display section name of the batch Ex: A');
-            $table->foreignId('batche_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
+            $table->string('name', 50)->comment('Display section name Ex: A');
+            $table->foreignId('batches_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
 
-            $table->unique(['name', 'batche_id']);
+            $table->unique(['name', 'batches_id']);
         });
     }
 

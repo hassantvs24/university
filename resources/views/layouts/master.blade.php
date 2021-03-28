@@ -118,6 +118,7 @@
 <!-- /Global Notification System: Using for common notification -->
 
 <script type="text/javascript">
+
     /**
      *  Global Delete Function: using for all type of delete operation
      */

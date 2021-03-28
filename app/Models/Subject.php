@@ -6,16 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
- * @property integer $subject_type_id
- * @property integer $subject_categorie_id
+ * @property integer $subject_categories_id
  * @property string $code
  * @property string $name
  * @property string $description
+ * @property string $status
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
  * @property SubjectCategory $subjectCategory
- * @property SubjectType $subjectType
  * @property CourseItem[] $courseItems
  */
 class Subject extends Model
@@ -30,28 +29,20 @@ class Subject extends Model
     /**
      * @var array
      */
-    protected $fillable = ['subject_type_id', 'subject_categorie_id', 'code', 'name', 'description', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['subject_categories_id', 'code', 'name', 'description', 'status', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function subjectCategory()
     {
-        return $this->belongsTo('App\Models\SubjectCategory', 'subject_categorie_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function subjectType()
-    {
-        return $this->belongsTo('App\Models\SubjectType');
+        return $this->belongsTo('App\Models\SubjectCategory', 'subject_categories_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function courseItemsDependency()
+    public function depend()
     {
         return $this->hasMany('App\Models\CourseItem', 'dependency');
     }

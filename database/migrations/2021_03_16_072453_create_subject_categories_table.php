@@ -16,6 +16,7 @@ class CreateSubjectCategoriesTable extends Migration
         Schema::create('subject_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->foreignId('subject_type_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

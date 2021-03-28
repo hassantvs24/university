@@ -18,8 +18,8 @@ class CreateSubjectsTable extends Migration
             $table->string('code',30)->unique();
             $table->string('name');
             $table->string('description')->nullable();
-            $table->foreignId('subject_type_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
-            $table->foreignId('subject_categorie_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->enum('status', ['Active', 'Inactive'])->default('Active');
+            $table->foreignId('subject_categories_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

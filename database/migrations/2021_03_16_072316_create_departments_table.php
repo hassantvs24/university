@@ -18,6 +18,7 @@ class CreateDepartmentsTable extends Migration
             $table->tinyInteger('code');
             $table->string('name');
             $table->string('short_name',10);
+            $table->foreignId('user_id')->nullable()->comment('Department Head')->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
 

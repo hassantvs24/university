@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
+ * @property integer $user_id
  * @property boolean $code
  * @property string $name
+ * @property string $short_name
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
+ * @property User $user
  * @property Batch[] $batches
- * @property Student[] $students
  */
 class Department extends Model
 {
@@ -26,7 +28,15 @@ class Department extends Model
     /**
      * @var array
      */
-    protected $fillable = ['code', 'name', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['user_id', 'code', 'name', 'short_name', 'deleted_at', 'created_at', 'updated_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -34,13 +44,5 @@ class Department extends Model
     public function batches()
     {
         return $this->hasMany('App\Models\Batch');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function students()
-    {
-        return $this->hasMany('App\Models\Student');
     }
 }

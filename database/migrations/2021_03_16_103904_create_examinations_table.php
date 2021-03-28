@@ -19,8 +19,11 @@ class CreateExaminationsTable extends Migration
             $table->enum('status', ['Pending', 'Processing', 'Approved', 'Cancel'])->default('Pending');
             $table->foreignId('exam_type_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->foreignId('registration_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
-            $table->foreignId('user_id')->comment('Student')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->foreignId('teacher')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('exam_controller')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('accountant')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('register')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('user_id')->comment('Student')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->string('notes')->nullable();
             $table->softDeletes();
             $table->timestamps();

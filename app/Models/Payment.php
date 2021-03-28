@@ -10,26 +10,28 @@ use Illuminate\Database\Eloquent\Model;
  * @property integer $registration_id
  * @property integer $fee_type_id
  * @property integer $user_id
+ * @property integer $accountant
  * @property integer $account_book_id
  * @property integer $payment_method_id
  * @property float $amount
  * @property string $pay_type
  * @property string $sections
+ * @property string $status
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
  * @property AccountBook $accountBook
+ * @property User $user
  * @property Expense $expense
  * @property FeeType $feeType
  * @property PaymentMethod $paymentMethod
  * @property Registration $registration
- * @property User $user
  */
 class Payment extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -37,7 +39,7 @@ class Payment extends Model
     /**
      * @var array
      */
-    protected $fillable = ['expenses_id', 'registration_id', 'fee_type_id', 'user_id', 'account_book_id', 'payment_method_id', 'amount', 'pay_type', 'sections', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['expenses_id', 'registration_id', 'fee_type_id', 'user_id', 'accountant', 'account_book_id', 'payment_method_id', 'amount', 'pay_type', 'sections', 'status', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -45,6 +47,14 @@ class Payment extends Model
     public function accountBook()
     {
         return $this->belongsTo('App\Models\AccountBook');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function accounts()
+    {
+        return $this->belongsTo('App\Models\User', 'accountant');
     }
 
     /**

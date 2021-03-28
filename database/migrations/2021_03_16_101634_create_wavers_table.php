@@ -15,12 +15,10 @@ class CreateWaversTable extends Migration
     {
         Schema::create('wavers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->float('amount')->default(0)->comment('Using percent (%)');
             $table->softDeletes();
             $table->timestamps();
-
-            $table->unique(['name', 'amount']);
         });
     }
 

@@ -85,11 +85,15 @@ class CreateStudentsTable extends Migration
             $table->string('doc_three_title')->nullable();
             $table->string('doc_three_file')->nullable();
 
-            $table->foreignId('user_categorie_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->enum('status',['Active', 'Inactive'])->default('Active');
+            $table->enum('register_type',['Normal', 'Uploaded'])->default('Normal');
+            $table->foreignId('user_categories_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('course_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
-            $table->foreignId('department_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
-            $table->foreignId('academic_year_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('section_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('waver_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('batches_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->foreignId('user_id')->unique()->constrained()->onDelete('cascade')->onUpdate('No Action');
+            $table->foreignId('upload_by')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

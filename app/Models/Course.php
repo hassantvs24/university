@@ -6,12 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
- * @property integer $batche_id
  * @property string $name
+ * @property string $status
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
- * @property Batch $batch
  * @property CourseItem[] $courseItems
  * @property Student[] $students
  */
@@ -27,15 +26,7 @@ class Course extends Model
     /**
      * @var array
      */
-    protected $fillable = ['batche_id', 'name', 'deleted_at', 'created_at', 'updated_at'];
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function batch()
-    {
-        return $this->belongsTo('App\Models\Batch', 'batche_id');
-    }
+    protected $fillable = ['name', 'status', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

@@ -65,15 +65,7 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">{{__('Course Info')}}</span>
-                                </a>
-                            </li>
-                            <li class="menu-item {{request()->routeIs('course.category.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
-                                <a href="{{route('course.category.index')}}" class="menu-link">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                        <span></span>
-                                    </i>
-                                    <span class="menu-text">{{__('Course Category')}}</span>
+                                    <span class="menu-text">{{__('Course')}}</span>
                                 </a>
                             </li>
                             <li class="menu-item {{request()->routeIs('subject.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
@@ -405,6 +397,14 @@
                                         <span></span>
                                     </i>
                                     <span class="menu-text">{{__('Department')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{request()->routeIs('batch.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('batch.index')}}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Batch Setup')}}</span>
                                 </a>
                             </li>
                             <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">

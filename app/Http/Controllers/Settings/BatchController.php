@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Course;
+namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
-use App\Models\Subject;
-use App\Models\SubjectCategory;
-use App\Models\SubjectType;
+use App\Models\AcademicYear;
+use App\Models\Batch;
+use App\Models\Department;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class SubjectsController extends Controller
+class BatchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +18,10 @@ class SubjectsController extends Controller
      */
     public function index()
     {
-        $table = Subject::orderBy('id', 'DESC')->get();
-        $category = SubjectCategory::orderBy('name')->get();
-        $types = SubjectType::orderBy('name')->get();
-        return view('course.subject')->with(['table' => $table, 'types' => $types, 'category' => $category]);
+        $table = Batch::orderBy('id', 'DESC')->get();
+        $academic_year = AcademicYear::orderBy('years', 'DESC')->get();
+        $department = Department::orderBy('code')->get();
+        return view('settings.batch')->with(['table' => $table, 'department' => $department, 'academic_year' => $academic_year]);
     }
 
     /**
@@ -43,24 +43,27 @@ class SubjectsController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'code' => 'required|string|max:30|unique:subjects,code',
+            'code' => 'required|string|max:30|unique:batches,code',
             'name' => 'required|string|max:191',
-            'subject_type_id' => 'required|numeric',
-            'subject_categorie_id' => 'required|numeric',
-            'status' => 'required|in:Active,Inactive'
+            'semester' => 'required|numeric|min:1|max:99',
+            'credit' => 'required|numeric|max:999',
+            'price' => 'required|numeric',
+            'department_id' => 'required|numeric',
+            'academic_year_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = new Subject();
-            $table->name = $request->name;
+            $table = new Batch();
             $table->code = $request->code;
-            $table->subject_type_id = $request->subject_type_id;
-            $table->subject_categorie_id = $request->subject_categorie_id;
-            $table->description = $request->description;
-            $table->status = $request->status;
+            $table->name = $request->name;
+            $table->semester = $request->semester;
+            $table->credit = $request->credit;
+            $table->price = $request->price;
+            $table->department_id = $request->department_id;
+            $table->academic_year_id = $request->academic_year_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -68,6 +71,7 @@ class SubjectsController extends Controller
         }
 
         return redirect()->back()->with(config('naz.save'));
+
     }
 
     /**
@@ -102,24 +106,27 @@ class SubjectsController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'code' => 'required|string|max:30|unique:subjects,code,'.$id,
+            'code' => 'required|string|max:30|unique:batches,code,'.$id,
             'name' => 'required|string|max:191',
-            'subject_type_id' => 'required|numeric',
-            'subject_categorie_id' => 'required|numeric',
-            'status' => 'required|in:Active,Inactive'
+            'semester' => 'required|numeric|min:1|max:99',
+            'credit' => 'required|numeric|max:999',
+            'price' => 'required|numeric',
+            'department_id' => 'required|numeric',
+            'academic_year_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = Subject::find($id);
-            $table->name = $request->name;
+            $table = Batch::find($id);
             $table->code = $request->code;
-            $table->subject_type_id = $request->subject_type_id;
-            $table->subject_categorie_id = $request->subject_categorie_id;
-            $table->description = $request->description;
-            $table->status = $request->status;
+            $table->name = $request->name;
+            $table->semester = $request->semester;
+            $table->credit = $request->credit;
+            $table->price = $request->price;
+            $table->department_id = $request->department_id;
+            $table->academic_year_id = $request->academic_year_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -133,12 +140,12 @@ class SubjectsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         try{
-            Subject::destroy($id);
+            Batch::destroy($id);
         }catch (\Exception $ex) {
             return redirect()->back()->with(config('naz.db_error'));
         }

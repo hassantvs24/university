@@ -18,10 +18,12 @@ class CreatePaymentsTable extends Migration
             $table->double('amount')->default(0);
             $table->enum('pay_type', ['IN', 'OUT']);
             $table->enum('sections', ['Expense', 'Registration', 'Fees', 'Due']);
+            $table->enum('status', ['Approved', 'Pending', 'Processing', 'Cancel']);
             $table->foreignId('expenses_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('registration_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('fee_type_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('accountant')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('account_book_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('payment_method_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();
