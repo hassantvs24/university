@@ -65,7 +65,7 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">{{__('Course')}}</span>
+                                    <span class="menu-text">{{__('Course List')}}</span>
                                 </a>
                             </li>
                             <li class="menu-item {{request()->routeIs('subject.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
@@ -73,7 +73,7 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">{{__('Subjects')}}</span>
+                                    <span class="menu-text">{{__('Subjects List')}}</span>
                                 </a>
                             </li>
                             <li class="menu-item {{request()->routeIs('subject.category.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">

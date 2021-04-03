@@ -17,6 +17,7 @@ class CreateAcademicYearsTable extends Migration
             $table->id();
             $table->string('name');
             $table->year('years')->comment('Using Current Year');
+            $table->enum('status', ['Active', 'Inactive'])->default('Active');
             $table->softDeletes();
             $table->timestamps();
 

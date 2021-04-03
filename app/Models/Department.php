@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $updated_at
  * @property User $user
  * @property Batch[] $batches
+ * @property Course[] $courses
  */
 class Department extends Model
 {
@@ -44,5 +45,13 @@ class Department extends Model
     public function batches()
     {
         return $this->hasMany('App\Models\Batch');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function courses()
+    {
+        return $this->hasMany('App\Models\Course');
     }
 }

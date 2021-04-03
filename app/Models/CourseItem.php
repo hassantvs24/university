@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property integer $dependency
  * @property integer $subject_id
  * @property integer $course_id
+ * @property string $name
  * @property boolean $semester_level
  * @property float $credit
  * @property string $deleted_at
@@ -16,14 +17,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $updated_at
  * @property Course $course
  * @property Subject $subject
- * @property Subject $subject
  * @property CourseRegistration[] $courseRegistrations
  */
 class CourseItem extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -31,7 +31,7 @@ class CourseItem extends Model
     /**
      * @var array
      */
-    protected $fillable = ['dependency', 'subject_id', 'course_id', 'semester_level', 'credit', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['dependency', 'subject_id', 'course_id', 'name', 'semester_level', 'credit', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -44,7 +44,7 @@ class CourseItem extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function subject()
+    public function depend()
     {
         return $this->belongsTo('App\Models\Subject', 'dependency');
     }

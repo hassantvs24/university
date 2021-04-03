@@ -6,11 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
+ * @property integer $department_id
+ * @property integer $academic_year_id
  * @property string $name
+ * @property boolean $semester
+ * @property boolean $total_subject
+ * @property float $total_credit
  * @property string $status
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
+ * @property AcademicYear $academicYear
+ * @property Department $department
  * @property CourseItem[] $courseItems
  * @property Student[] $students
  */
@@ -26,7 +33,23 @@ class Course extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'status', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['department_id', 'academic_year_id', 'name', 'semester', 'total_subject', 'total_credit', 'status', 'deleted_at', 'created_at', 'updated_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function academicYear()
+    {
+        return $this->belongsTo('App\Models\AcademicYear');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function department()
+    {
+        return $this->belongsTo('App\Models\Department');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

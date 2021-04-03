@@ -15,6 +15,7 @@ class CreateCourseItemsTable extends Migration
     {
         Schema::create('course_items', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable()->comment('Course Tag for grouping, Example: Program core courses');
             $table->tinyInteger('semester_level')->comment('Level of semester');
             $table->float('credit')->default(0);
             $table->foreignId('dependency')->nullable()->constrained('subjects')->onDelete('Set Null')->onUpdate('No Action');
