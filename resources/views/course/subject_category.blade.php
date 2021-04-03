@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <x-card label="{{__('Subject Category List')}}">
                 <x-slot name="button">
                     <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#addModal"><i class="flaticon2-add-1"></i> {{__('Add new record')}}</button>
@@ -16,6 +16,7 @@
                     <thead>
                     <tr>
                         <th>{{__('Subject Category Name')}}</th>
+                        <th>{{__('Subject Types')}}</th>
                         <th class="text-right">{{__('Action')}}</th>
                     </tr>
                     </thead>
@@ -23,6 +24,7 @@
                     @foreach($table as $row)
                         <tr>
                             <td>{{$row->name}}</td>
+                            <td>{{$row->subjectType->name ?? ''}}</td>
                             <td class="text-right">
                                 <x-actions>
 
@@ -30,6 +32,7 @@
                                         <a href="javascript:;" class="navi-link" data-toggle="modal" data-target="#ediModal" onclick="ediFn(this)"
                                            data-href="{{route('subject.category.update', ['category' => $row->id])}}"
                                            data-name="{{$row->name}}"
+                                           data-types="{{$row->subject_type_id}}"
                                         >
                                             <span class="navi-icon"><i class="la la-pencil-square-o text-success"></i></span>
                                             <span class="navi-text">{{__('Edit')}}</span>
@@ -58,19 +61,25 @@
 @section('script')
     <script type="text/javascript">
 
+        $(function () {
+            $('.select2').select2();
+        });
+
         function ediFn(e){
             var link = e.getAttribute('data-href');
             var name = e.getAttribute('data-name');
+            var subject_type_id = e.getAttribute('data-types');
 
             $('#ediModal form').attr('action', link);
 
             $('#ediModal [name=name]').val(name);
+            $('#ediModal [name=subject_type_id]').val(subject_type_id).select2();
         }
 
         $('#kt_datatable').DataTable({
             order: [],//Disable default sorting
             columnDefs: [
-                { orderable: false, "targets": [1] }//For Column Order
+                { orderable: false, "targets": [2] }//For Column Order
             ]
         });
     </script>

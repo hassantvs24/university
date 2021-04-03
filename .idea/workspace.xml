@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/SubjectType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_registration_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_102911_create_registration_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/SubjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072453_create_subject_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072453_create_subject_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/box/subject.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/box/subject.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/box/subject_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/box/subject_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/subject.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/subject.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/subject_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/subject_category.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,15 +201,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\university\app\Models" />
+      <recent name="D:\laragon\www\university\app\Customer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\university\resources\views\settings\box" />
       <recent name="D:\laragon\www\university\public" />
       <recent name="C:\wamp64\www\university\resources\views\vendor\jetstream\components" />
       <recent name="C:\wamp64\www\university\resources\views\layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\university\app\Customer" />
-      <recent name="D:\laragon\www\university\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -252,7 +260,9 @@
       <workItem from="1616832165324" duration="1471000" />
       <workItem from="1616836523286" duration="9490000" />
       <workItem from="1616906690804" duration="17746000" />
-      <workItem from="1616949215327" duration="5030000" />
+      <workItem from="1616949215327" duration="5624000" />
+      <workItem from="1617092073439" duration="13000" />
+      <workItem from="1617432986553" duration="2580000" />
     </task>
     <servers />
   </component>
@@ -275,14 +285,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616921166515">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617434336338">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616921166515" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1616589991715">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1617434336338" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1617092084961">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616589991715" />
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1617092084960" />
     <state x="794" y="448" key="NewPhpFileDialog" timestamp="1616917115366">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

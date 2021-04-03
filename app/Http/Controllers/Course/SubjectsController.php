@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Course;
 
 use App\Http\Controllers\Controller;
 use App\Models\Subject;
-use App\Models\SubjectCategory;
-use App\Models\SubjectType;
+use App\Models\SubjectCategories;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -19,9 +18,8 @@ class SubjectsController extends Controller
     public function index()
     {
         $table = Subject::orderBy('id', 'DESC')->get();
-        $category = SubjectCategory::orderBy('name')->get();
-        $types = SubjectType::orderBy('name')->get();
-        return view('course.subject')->with(['table' => $table, 'types' => $types, 'category' => $category]);
+        $category = SubjectCategories::orderBy('name')->get();
+        return view('course.subject')->with(['table' => $table, 'category' => $category]);
     }
 
     /**
@@ -45,8 +43,7 @@ class SubjectsController extends Controller
         $validator = Validator::make($request->all(), [
             'code' => 'required|string|max:30|unique:subjects,code',
             'name' => 'required|string|max:191',
-            'subject_type_id' => 'required|numeric',
-            'subject_categorie_id' => 'required|numeric',
+            'subject_categories_id' => 'required|numeric',
             'status' => 'required|in:Active,Inactive'
         ]);
 
@@ -57,8 +54,7 @@ class SubjectsController extends Controller
             $table = new Subject();
             $table->name = $request->name;
             $table->code = $request->code;
-            $table->subject_type_id = $request->subject_type_id;
-            $table->subject_categorie_id = $request->subject_categorie_id;
+            $table->subject_categories_id = $request->subject_categories_id;
             $table->description = $request->description;
             $table->status = $request->status;
             $table->save();
@@ -104,8 +100,7 @@ class SubjectsController extends Controller
         $validator = Validator::make($request->all(), [
             'code' => 'required|string|max:30|unique:subjects,code,'.$id,
             'name' => 'required|string|max:191',
-            'subject_type_id' => 'required|numeric',
-            'subject_categorie_id' => 'required|numeric',
+            'subject_categories_id' => 'required|numeric',
             'status' => 'required|in:Active,Inactive'
         ]);
 
@@ -116,8 +111,7 @@ class SubjectsController extends Controller
             $table = Subject::find($id);
             $table->name = $request->name;
             $table->code = $request->code;
-            $table->subject_type_id = $request->subject_type_id;
-            $table->subject_categorie_id = $request->subject_categorie_id;
+            $table->subject_categories_id = $request->subject_categories_id;
             $table->description = $request->description;
             $table->status = $request->status;
             $table->save();

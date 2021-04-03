@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Course;
 
 use App\Http\Controllers\Controller;
-use App\Models\SubjectCategory;
+use App\Models\SubjectCategories;
+use App\Models\SubjectType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -16,8 +17,9 @@ class SubjectCategoryController extends Controller
      */
     public function index()
     {
-        $table = SubjectCategory::orderBy('id', 'DESC')->get();
-        return view('course.subject_category')->with(['table' => $table]);
+        $table = SubjectCategories::orderBy('id', 'DESC')->get();
+        $types = SubjectType::orderBy('name')->get();
+        return view('course.subject_category')->with(['table' => $table, 'types' => $types]);
     }
 
     /**
@@ -40,14 +42,16 @@ class SubjectCategoryController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:191|unique:subject_categories,name',
+            'subject_type_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = new SubjectCategory();
+            $table = new SubjectCategories();
             $table->name = $request->name;
+            $table->subject_type_id = $request->subject_type_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -91,14 +95,16 @@ class SubjectCategoryController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:191|unique:subject_categories,name,'.$id,
+            'subject_type_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = SubjectCategory::find($id);
+            $table = SubjectCategories::find($id);
             $table->name = $request->name;
+            $table->subject_type_id = $request->subject_type_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -117,7 +123,7 @@ class SubjectCategoryController extends Controller
     public function destroy($id)
     {
         try{
-            SubjectCategory::destroy($id);
+            SubjectCategories::destroy($id);
         }catch (\Exception $ex) {
             return redirect()->back()->with(config('naz.db_error'));
         }

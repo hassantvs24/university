@@ -36,7 +36,7 @@ class Subject extends Model
      */
     public function subjectCategory()
     {
-        return $this->belongsTo('App\Models\SubjectCategory', 'subject_categories_id');
+        return $this->belongsTo('App\Models\SubjectCategories', 'subject_categories_id');
     }
 
     /**

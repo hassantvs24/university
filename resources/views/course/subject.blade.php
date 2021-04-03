@@ -30,7 +30,7 @@
                             <td>{{$row->code}}</td>
                             <td>{{$row->name}}</td>
                             <td>{{$row->subjectCategory->name ?? ''}}</td>
-                            <td>{{$row->subjectType->name ?? ''}}</td>
+                            <td>{{$row->subjectCategory->subjectType->name ?? ''}}</td>
                             <td>{{__($row->status)}}</td>
                             <td title="{{$row->description}}">{{Str::limit($row->description, 20)}}</td>
                             <td class="text-right">
@@ -41,8 +41,7 @@
                                            data-href="{{route('subject.update', ['subject' => $row->id])}}"
                                            data-code="{{$row->code}}"
                                            data-name="{{$row->name}}"
-                                           data-types="{{$row->subject_type_id}}"
-                                           data-categorie="{{$row->subject_categorie_id}}"
+                                           data-categories="{{$row->subject_categories_id}}"
                                            data-description="{{$row->description}}"
                                            data-status="{{$row->status}}"
                                         >
@@ -81,8 +80,7 @@
             var link = e.getAttribute('data-href');
             var code = e.getAttribute('data-code');
             var name = e.getAttribute('data-name');
-            var subject_type_id = e.getAttribute('data-types');
-            var subject_categorie_id = e.getAttribute('data-categorie');
+            var subject_categories_id = e.getAttribute('data-categories');
             var description = e.getAttribute('data-description');
             var status = e.getAttribute('data-status');
 
@@ -90,8 +88,7 @@
 
             $('#ediModal [name=code]').val(code);
             $('#ediModal [name=name]').val(name);
-            $('#ediModal [name=subject_type_id]').val(subject_type_id).select2();
-            $('#ediModal [name=subject_categorie_id]').val(subject_categorie_id).select2();
+            $('#ediModal [name=subject_categories_id]').val(subject_categories_id).select2();
             $('#ediModal [name=description]').val(description);
             $('#ediModal [name=status]').val(status);
         }
