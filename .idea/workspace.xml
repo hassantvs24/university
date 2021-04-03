@@ -20,18 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/course/box/course.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/DemoSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/AcademicYear.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CourseItem.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Department.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_072314_create_academic_years_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_072314_create_academic_years_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_075003_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075003_create_courses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_075136_create_course_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075136_create_course_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/course.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +255,7 @@
       <workItem from="1616906690804" duration="17746000" />
       <workItem from="1616949215327" duration="5624000" />
       <workItem from="1617092073439" duration="13000" />
-      <workItem from="1617432986553" duration="8233000" />
+      <workItem from="1617432986553" duration="12901000" />
     </task>
     <servers />
   </component>
