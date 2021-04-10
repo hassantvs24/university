@@ -27,11 +27,15 @@
                     </thead>
                     <tbody>
                     @foreach($table as $row)
+                        @php
+                            $total_credit = $row->courseItems()->sum('credit');
+                            $total_subject = $row->courseItems()->count();
+                        @endphp
                         <tr>
                             <td>{{$row->name}}</td>
                             <td>{{$row->semester}}</td>
-                            <td>{{$row->total_subject}}</td>
-                            <td>{{$row->total_credit}}</td>
+                            <td>{{$total_subject}}/{{$row->total_subject}}</td>
+                            <td>{{$total_credit}}/{{$row->total_credit}}</td>
                             <td title="{{$row->department->name ?? ''}}">{{$row->department->short_name ?? ''}}</td>
                             <td>{{$row->academicYear->years ?? ''}}</td>
                             <td>{{$row->status}}</td>

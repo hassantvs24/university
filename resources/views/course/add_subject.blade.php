@@ -8,7 +8,7 @@
 
     <div class="row">
         <div class="col">
-            <x-card exclass="mb-5" label="{{$table->name}}">
+            <x-card exclass="mb-5" label="{{$table->name}} ({{$table->semester}})">
 
                 <x-slot name="button">
                     <a href="{{route('course.index')}}" class="btn btn-danger ml-1"><i class="flaticon2-back"></i> {{__('Back to course list')}}</a>
@@ -16,18 +16,19 @@
 
                 @php
                     $total_credit = $table->courseItems()->sum('credit');
+                    $total_subject = $table->courseItems()->count();
                 @endphp
 
                 <div class="row">
                     <div class="col">
                         <table class="table table-bordered">
                             <tr>
-                                <th>{{__('Number of Semester')}}</th>
-                                <td>{{$table->semester}}</td>
+                                <th>{{__('Total Offer Subject')}}</th>
+                                <td>{{$total_subject}}/{{$table->total_subject}}</td>
                             </tr>
                             <tr>
-                                <th>{{__('Total Offer Subject')}}</th>
-                                <td>{{$total_credit}}/{{$table->total_subject}}</td>
+                                <th>{{__('Total Offer Credit')}}</th>
+                                <td>{{$total_credit}}/{{$table->total_credit}}</td>
                             </tr>
                         </table>
                     </div>
