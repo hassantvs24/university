@@ -6,17 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
+ * @property integer $courses_id
  * @property integer $department_id
  * @property integer $academic_year_id
  * @property boolean $code
  * @property string $name
- * @property boolean $semester
- * @property int $credit
  * @property int $price
  * @property string $deleted_at
  * @property string $created_at
  * @property string $updated_at
  * @property AcademicYear $academicYear
+ * @property Course $course
  * @property Department $department
  * @property Registration[] $registrations
  * @property Section[] $sections
@@ -34,7 +34,7 @@ class Batch extends Model
     /**
      * @var array
      */
-    protected $fillable = ['department_id', 'academic_year_id', 'code', 'name', 'semester', 'credit', 'price', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['courses_id', 'department_id', 'academic_year_id', 'code', 'name', 'price', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -42,6 +42,14 @@ class Batch extends Model
     public function academicYear()
     {
         return $this->belongsTo('App\Models\AcademicYear');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function course()
+    {
+        return $this->belongsTo('App\Models\Course', 'courses_id');
     }
 
     /**

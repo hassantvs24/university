@@ -39,6 +39,13 @@
                                 <x-actions>
 
                                     <li class="navi-item">
+                                        <a href="{{route('course.show', ['course' => $row->id])}}" class="navi-link">
+                                            <span class="navi-icon"><i class="la la-book-open text-info"></i></span>
+                                            <span class="navi-text">{{__('Add Subject')}}</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="navi-item">
                                         <a href="javascript:;" class="navi-link" data-toggle="modal" data-target="#ediModal" onclick="ediFn(this)"
                                            data-href="{{route('course.update', ['course' => $row->id])}}"
                                            data-name="{{$row->name}}"

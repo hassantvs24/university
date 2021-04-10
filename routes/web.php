@@ -39,6 +39,9 @@ Route::prefix('admin')->group(function () {
         Route::resource('/course/subject/type', SubjectTypeController::class, ['as' => 'subject']);
         Route::resource('/course/subject', SubjectsController::class);
 
+        Route::put('/course/add-subject/{id}', [CourseController::class, 'add_subject_item'])->name('course.add_subject');
+        Route::put('/course/edit-subject/{id}', [CourseController::class, 'edit_subject_item'])->name('course.edit_subject');
+        Route::delete('/course/del-subject/{id}', [CourseController::class, 'del_subject_item'])->name('course.del_subject');
         Route::resource('/course', CourseController::class);
 
         Route::resource('/settings/year', AcademicYearController::class);

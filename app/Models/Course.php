@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $updated_at
  * @property AcademicYear $academicYear
  * @property Department $department
+ * @property Batch[] $batches
  * @property CourseItem[] $courseItems
  * @property Student[] $students
  */
@@ -25,7 +26,7 @@ class Course extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -49,6 +50,14 @@ class Course extends Model
     public function department()
     {
         return $this->belongsTo('App\Models\Department');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function batches()
+    {
+        return $this->hasMany('App\Models\Batch', 'courses_id');
     }
 
     /**

@@ -17,9 +17,8 @@ class CreateBatchesTable extends Migration
             $table->id();
             $table->tinyInteger('code');
             $table->string('name')->comment('Display batch name Ex: 1st');
-            $table->tinyInteger('semester')->default(0)->comment('Number of semester');
-            $table->integer('credit')->default(0)->comment('Total Credit hour');
             $table->integer('price')->default(0)->comment('Credit price per hour');
+            $table->foreignId('courses_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('department_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->foreignId('academic_year_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();

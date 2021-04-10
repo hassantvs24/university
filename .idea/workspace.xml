@@ -20,7 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/course/add_subject.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/box/add_subject.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Course/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Batch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_075137_create_batches_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_075137_create_batches_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/course.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,22 +194,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../realfagspesialiste" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\university\app\Models" />
-      <recent name="D:\laragon\www\university\app\Customer" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\university\resources\views\settings\box" />
       <recent name="D:\laragon\www\university\public" />
       <recent name="C:\wamp64\www\university\resources\views\vendor\jetstream\components" />
       <recent name="C:\wamp64\www\university\resources\views\layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\university\app\Models" />
+      <recent name="D:\laragon\www\university\app\Customer" />
     </key>
   </component>
   <component name="RunManager">
@@ -256,6 +265,7 @@
       <workItem from="1617432986553" duration="12901000" />
       <workItem from="1617452790635" duration="15000" />
       <workItem from="1617598942212" duration="13000" />
+      <workItem from="1618037403279" duration="14704000" />
     </task>
     <servers />
   </component>
@@ -278,6 +288,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="697" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618043844977">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="697" y="327" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618043844977" />
     <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617447624413">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -286,10 +300,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1617598953621" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1617443699388">
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1618043865089">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1617443699388" />
+    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618043865089" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1616566513319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
