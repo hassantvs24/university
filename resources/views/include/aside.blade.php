@@ -164,7 +164,7 @@
                     </div>
                 </li>
 
-                <li class="menu-item menu-item-submenu {{-- (request()->is('users*')) ? 'menu-item-open menu-item-here' : '' --}}" aria-haspopup="true" data-menu-toggle="hover">
+                <li class="menu-item menu-item-submenu {{ (request()->is('admin/student*')) ? 'menu-item-open menu-item-here' : '' }}" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-avatar"></i>
                         <span class="menu-text">{{__('Students')}}</span>
@@ -178,22 +178,39 @@
                                     <span class="menu-text">{{__('Students')}}</span>
                                 </span>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('users.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('student.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('student.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">{{__('Student Info')}}</span>
+                                    <span class="menu-text">{{__('Student List')}}</span>
                                 </a>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('student.category.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('student.category.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">{{__('Student Category')}}</span>
+                                    <span class="menu-text">{{__('Category')}}</span>
                                 </a>
                             </li>
+                            <li class="menu-item {{request()->routeIs('section.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('section.index')}}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Section')}}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{request()->routeIs('batch.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('batch.index')}}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">{{__('Batch')}}</span>
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                 </li>
@@ -397,14 +414,6 @@
                                         <span></span>
                                     </i>
                                     <span class="menu-text">{{__('Department')}}</span>
-                                </a>
-                            </li>
-                            <li class="menu-item {{request()->routeIs('batch.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
-                                <a href="{{route('batch.index')}}" class="menu-link">
-                                    <i class="menu-bullet menu-bullet-dot">
-                                        <span></span>
-                                    </i>
-                                    <span class="menu-text">{{__('Batch Setup')}}</span>
                                 </a>
                             </li>
                             <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">

@@ -16,8 +16,6 @@
         </x-nselect2>
         <x-ninput label="{{__('Batch Code')}}" name="code" type="number" min="1" max="999" required="required" />
         <x-ninput label="{{__('Batch Name')}}" name="name" required="required" />
-        <x-ninput label="{{__('Total Semester')}}" name="semester" type="number" min="1" max="99" required="required" />
-        <x-ninput label="{{__('Total Credit Hour')}}" name="credit" type="number" step=".5" min="1" max="999" required="required" />
         <x-ninput label="{{__('Hourly Rate')}}" name="price" type="number" step=".5" min="0" required="required" />
 
     </x-modals>
@@ -39,8 +37,6 @@
         </x-nselect2>
         <x-ninput label="{{__('Batch Code')}}" name="code" type="number" min="1" max="999" required="required" />
         <x-ninput label="{{__('Batch Name')}}" name="name" required="required" />
-        <x-ninput label="{{__('Total Semester')}}" name="semester" type="number" min="1" max="99" required="required" />
-        <x-ninput label="{{__('Total Credit Hour')}}" name="credit" type="number" step=".5" min="1" max="999" required="required" />
         <x-ninput label="{{__('Hourly Rate')}}" name="price" type="number" step=".5" min="0" required="required" />
     </x-modals>
 

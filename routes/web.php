@@ -6,8 +6,11 @@ use App\Http\Controllers\Course\SubjectsController;
 use App\Http\Controllers\Course\SubjectTypeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Settings\AcademicYearController;
-use App\Http\Controllers\Settings\BatchController;
+use App\Http\Controllers\Student\BatchController;
 use App\Http\Controllers\Settings\DepartmentController;
+use App\Http\Controllers\Student\SectionController;
+use App\Http\Controllers\Student\StudentCategoryController;
+use App\Http\Controllers\Student\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,9 +47,13 @@ Route::prefix('admin')->group(function () {
         Route::delete('/course/del-subject/{id}', [CourseController::class, 'del_subject_item'])->name('course.del_subject');
         Route::resource('/course', CourseController::class);
 
+        Route::resource('/student/section', SectionController::class);
+        Route::resource('/student/batch', BatchController::class);
+        Route::resource('/student/category', StudentCategoryController::class, ['as' => 'student']);
+        Route::resource('/student', StudentController::class);
+
         Route::resource('/settings/year', AcademicYearController::class);
         Route::resource('/settings/department', DepartmentController::class);
-        Route::resource('/settings/batch', BatchController::class);
     });
 });
 /*

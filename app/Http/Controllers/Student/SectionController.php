@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Settings;
+namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
-use App\Models\AcademicYear;
 use App\Models\Batch;
-use App\Models\Department;
+use App\Models\Section;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class BatchController extends Controller
+class SectionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +17,9 @@ class BatchController extends Controller
      */
     public function index()
     {
-        $table = Batch::orderBy('id', 'DESC')->get();
-        $academic_year = AcademicYear::orderBy('years', 'DESC')->get();
-        $department = Department::orderBy('code')->get();
-        return view('settings.batch')->with(['table' => $table, 'department' => $department, 'academic_year' => $academic_year]);
+        $table = Section::orderBy('id', 'DESC')->get();
+        $batches = Batch::orderBy('id', 'DESC')->get();
+        return view('student.section')->with(['table' => $table, 'batches' => $batches]);
     }
 
     /**
@@ -43,27 +41,17 @@ class BatchController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'code' => 'required|string|max:30|unique:batches,code',
-            'name' => 'required|string|max:191',
-            'semester' => 'required|numeric|min:1|max:99',
-            'credit' => 'required|numeric|max:999',
-            'price' => 'required|numeric',
-            'department_id' => 'required|numeric',
-            'academic_year_id' => 'required|numeric'
+            'name' => 'required|string|max:50|unique:subject_categories,name',
+            'batches_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = new Batch();
-            $table->code = $request->code;
+            $table = new Section();
             $table->name = $request->name;
-            $table->semester = $request->semester;
-            $table->credit = $request->credit;
-            $table->price = $request->price;
-            $table->department_id = $request->department_id;
-            $table->academic_year_id = $request->academic_year_id;
+            $table->batches_id = $request->batches_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -71,7 +59,6 @@ class BatchController extends Controller
         }
 
         return redirect()->back()->with(config('naz.save'));
-
     }
 
     /**
@@ -106,27 +93,17 @@ class BatchController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'code' => 'required|string|max:30|unique:batches,code,'.$id,
-            'name' => 'required|string|max:191',
-            'semester' => 'required|numeric|min:1|max:99',
-            'credit' => 'required|numeric|max:999',
-            'price' => 'required|numeric',
-            'department_id' => 'required|numeric',
-            'academic_year_id' => 'required|numeric'
+            'name' => 'required|string|max:50|unique:subject_categories,name',
+            'batches_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = Batch::find($id);
-            $table->code = $request->code;
+            $table = Section::find($id);
             $table->name = $request->name;
-            $table->semester = $request->semester;
-            $table->credit = $request->credit;
-            $table->price = $request->price;
-            $table->department_id = $request->department_id;
-            $table->academic_year_id = $request->academic_year_id;
+            $table->batches_id = $request->batches_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -140,12 +117,12 @@ class BatchController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
         try{
-            Batch::destroy($id);
+            Section::destroy($id);
         }catch (\Exception $ex) {
             return redirect()->back()->with(config('naz.db_error'));
         }

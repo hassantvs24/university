@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
-use App\Models\UserCategory;
+use App\Models\AcademicYear;
+use App\Models\Batch;
+use App\Models\Department;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class StudentCategoryController extends Controller
+class BatchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +18,10 @@ class StudentCategoryController extends Controller
      */
     public function index()
     {
-        $table = UserCategory::orderBy('id', 'DESC')->where('user_type', 'Student')->get();
-        return view('student.category')->with(['table' => $table]);
+        $table = Batch::orderBy('id', 'DESC')->get();
+        $academic_year = AcademicYear::orderBy('years', 'DESC')->get();
+        $department = Department::orderBy('code')->get();
+        return view('student.batch')->with(['table' => $table, 'department' => $department, 'academic_year' => $academic_year]);
     }
 
     /**
@@ -39,16 +43,23 @@ class StudentCategoryController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
+            'code' => 'required|string|max:30|unique:batches,code',
             'name' => 'required|string|max:191',
+            'price' => 'required|numeric',
+            'department_id' => 'required|numeric',
+            'academic_year_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = new UserCategory();
+            $table = new Batch();
+            $table->code = $request->code;
             $table->name = $request->name;
-            $table->user_type = 'Student';
+            $table->price = $request->price;
+            $table->department_id = $request->department_id;
+            $table->academic_year_id = $request->academic_year_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -56,6 +67,7 @@ class StudentCategoryController extends Controller
         }
 
         return redirect()->back()->with(config('naz.save'));
+
     }
 
     /**
@@ -90,16 +102,23 @@ class StudentCategoryController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
+            'code' => 'required|string|max:30|unique:batches,code,'.$id,
             'name' => 'required|string|max:191',
+            'price' => 'required|numeric',
+            'department_id' => 'required|numeric',
+            'academic_year_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
 
         try{
 
-            $table = UserCategory::find($id);
+            $table = Batch::find($id);
+            $table->code = $request->code;
             $table->name = $request->name;
-            $table->user_type = 'Student';
+            $table->price = $request->price;
+            $table->department_id = $request->department_id;
+            $table->academic_year_id = $request->academic_year_id;
             $table->save();
 
         }catch (\Exception $ex) {
@@ -118,7 +137,7 @@ class StudentCategoryController extends Controller
     public function destroy($id)
     {
         try{
-            UserCategory::destroy($id);
+            Batch::destroy($id);
         }catch (\Exception $ex) {
             return redirect()->back()->with(config('naz.db_error'));
         }
