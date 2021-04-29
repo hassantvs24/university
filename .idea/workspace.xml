@@ -20,21 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/SectionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/box/category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/box/section.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/box/student.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/section.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/student.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/StudentAcademic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/StudentDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/StudentGuardian.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/StudentJobExp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_060821_create_student_academics_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_061824_create_student_job_exps_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_061838_create_student_documents_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_061949_create_student_guardians_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/BatchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/BatchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentCategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/settings/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/settings/box/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/box/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/box/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/box/student.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +199,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../realfagspesialiste" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -280,6 +280,15 @@
       <workItem from="1618159455883" duration="18000" />
       <workItem from="1618159498053" duration="7975000" />
       <workItem from="1618207488685" duration="61000" />
+      <workItem from="1618563799291" duration="2136000" />
+      <workItem from="1618898039091" duration="5975000" />
+      <workItem from="1619164297964" duration="1088000" />
+      <workItem from="1619174119340" duration="1224000" />
+      <workItem from="1619288635811" duration="3977000" />
+      <workItem from="1619328944478" duration="4554000" />
+      <workItem from="1619412077242" duration="5518000" />
+      <workItem from="1619690686589" duration="6486000" />
+      <workItem from="1619713217464" duration="5449000" />
     </task>
     <servers />
   </component>
@@ -310,18 +319,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618166756001" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1618207548588">
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1619417640332">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618207548588" />
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619417640332" />
     <state x="775" y="248" key="NewPhpClassDialog" timestamp="1618159294128">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="775" y="248" key="NewPhpClassDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618159294128" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1618161820414">
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1618898092920">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618161820414" />
+    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618898092920" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1616566513319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

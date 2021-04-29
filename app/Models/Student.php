@@ -13,68 +13,55 @@ use Illuminate\Database\Eloquent\Model;
  * @property integer $batches_id
  * @property integer $user_id
  * @property integer $upload_by
- * @property string $student_id
+ * @property integer $from_no
+ * @property integer $student_id
  * @property string $contact
  * @property string $emergency_contact
  * @property string $name
  * @property string $dob
+ * @property float $height
+ * @property float $weight
  * @property string $gender
  * @property string $blood_group
  * @property string $religion
- * @property float $height
- * @property float $weight
- * @property float $nid
- * @property float $waver
- * @property string $waver_name
- * @property string $father_name
- * @property string $father_contact
- * @property string $father_email
- * @property string $father_occupation
- * @property string $father_nid
- * @property string $father_photo
- * @property string $mother_name
- * @property string $mother_contact
- * @property string $mother_email
- * @property string $mother_occupation
- * @property string $mother_nid
- * @property string $mother_photo
- * @property string $guardian_name
- * @property string $guardian_contact
- * @property string $guardian_email
- * @property string $guardian_occupation
- * @property string $guardian_nid
- * @property string $guardian_photo
- * @property string $address
- * @property string $city
- * @property string $zip
- * @property string $state
+ * @property string $marital_status
+ * @property string $birth_place
+ * @property string $Nationality
+ * @property string $nid
+ * @property string $house
+ * @property string $road
+ * @property string $village
+ * @property string $po
+ * @property string $pc
+ * @property string $upazilla
  * @property string $district
- * @property string $sub_district
- * @property string $country
- * @property string $ssc_roll
- * @property string $ssc_reg
- * @property string $ssc_year
- * @property string $ssc_division
- * @property float $ssc_point
- * @property string $ssc_grade
- * @property string $ssc_certificate
- * @property string $ssc_mark_sheet
- * @property string $ssc_testimonial
- * @property string $hsc_roll
- * @property string $hsc_reg
- * @property string $hsc_year
- * @property string $hsc_division
- * @property float $hsc_point
- * @property string $hsc_grade
- * @property string $hsc_certificate
- * @property string $hsc_mark_sheet
- * @property string $hsc_testimonial
- * @property string $doc_one_title
- * @property string $doc_one_file
- * @property string $doc_two_title
- * @property string $doc_two_file
- * @property string $doc_three_title
- * @property string $doc_three_file
+ * @property string $permanent_house
+ * @property string $permanent_road
+ * @property string $permanent_village
+ * @property string $permanent_po
+ * @property string $permanent_pc
+ * @property string $permanent_upazilla
+ * @property string $permanent_district
+ * @property string $know_about
+ * @property string $rtm_student_name
+ * @property string $rtm_student_id
+ * @property string $rtm_staff_name
+ * @property string $rtm_staff_id
+ * @property string $spoken_score
+ * @property string $spoken_certificate_date
+ * @property boolean $is_expelled
+ * @property string $expelled_reason
+ * @property boolean $is_job_exp
+ * @property string $extra_activity
+ * @property float $waver
+ * @property string $description
+ * @property boolean $is_approved_dean
+ * @property string $dean_sign_date
+ * @property boolean $is_approved_register
+ * @property string $register_sign_date
+ * @property boolean $is_approved_admission
+ * @property string $admission_sign_date
+ * @property string $admission_in
  * @property string $status
  * @property string $register_type
  * @property string $deleted_at
@@ -85,6 +72,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property Section $section
  * @property User $user
  * @property UserCategory $userCategory
+ * @property User $users
+ * @property Waver $wavers
  */
 class Student extends Model
 {
@@ -98,7 +87,7 @@ class Student extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_categories_id', 'course_id', 'section_id', 'waver_id', 'batches_id', 'user_id', 'upload_by', 'student_id', 'contact', 'emergency_contact', 'name', 'dob', 'gender', 'blood_group', 'religion', 'height', 'weight', 'nid', 'waver', 'waver_name', 'father_name', 'father_contact', 'father_email', 'father_occupation', 'father_nid', 'father_photo', 'mother_name', 'mother_contact', 'mother_email', 'mother_occupation', 'mother_nid', 'mother_photo', 'guardian_name', 'guardian_contact', 'guardian_email', 'guardian_occupation', 'guardian_nid', 'guardian_photo', 'address', 'city', 'zip', 'state', 'district', 'sub_district', 'country', 'ssc_roll', 'ssc_reg', 'ssc_year', 'ssc_division', 'ssc_point', 'ssc_grade', 'ssc_certificate', 'ssc_mark_sheet', 'ssc_testimonial', 'hsc_roll', 'hsc_reg', 'hsc_year', 'hsc_division', 'hsc_point', 'hsc_grade', 'hsc_certificate', 'hsc_mark_sheet', 'hsc_testimonial', 'doc_one_title', 'doc_one_file', 'doc_two_title', 'doc_two_file', 'doc_three_title', 'doc_three_file', 'status', 'register_type', 'deleted_at', 'created_at', 'updated_at'];
+    protected $fillable = ['user_categories_id', 'course_id', 'section_id', 'waver_id', 'batches_id', 'user_id', 'upload_by', 'from_no', 'student_id', 'contact', 'emergency_contact', 'name', 'dob', 'height', 'weight', 'gender', 'blood_group', 'religion', 'marital_status', 'birth_place', 'Nationality', 'nid', 'house', 'road', 'village', 'po', 'pc', 'upazilla', 'district', 'permanent_house', 'permanent_road', 'permanent_village', 'permanent_po', 'permanent_pc', 'permanent_upazilla', 'permanent_district', 'know_about', 'rtm_student_name', 'rtm_student_id', 'rtm_staff_name', 'rtm_staff_id', 'spoken_score', 'spoken_certificate_date', 'is_expelled', 'expelled_reason', 'is_job_exp', 'extra_activity', 'waver', 'description', 'is_approved_dean', 'dean_sign_date', 'is_approved_register', 'register_sign_date', 'is_approved_admission', 'admission_sign_date', 'admission_in', 'status', 'register_type', 'deleted_at', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -127,7 +116,7 @@ class Student extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function uploader()
+    public function uploaded()
     {
         return $this->belongsTo('App\Models\User', 'upload_by');
     }
@@ -151,7 +140,7 @@ class Student extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function waver()
+    public function wavers()
     {
         return $this->belongsTo('App\Models\Waver');
     }

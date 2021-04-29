@@ -49,7 +49,7 @@
                 <li class="menu-item menu-item-submenu {{ (request()->is('admin/course*')) ? 'menu-item-open menu-item-here' : '' }}" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-open-text-book"></i>
-                        <span class="menu-text">{{__('Course')}}</span>
+                        <span class="menu-text">{{__('Program')}}</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
@@ -57,7 +57,7 @@
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
                                 <span class="menu-link">
-                                    <span class="menu-text">{{__('Course')}}</span>
+                                    <span class="menu-text">{{__('Program')}}</span>
                                 </span>
                             </li>
                             <li class="menu-item {{request()->routeIs('course.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
@@ -65,7 +65,7 @@
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">{{__('Course List')}}</span>
+                                    <span class="menu-text">{{__('Program List')}}</span>
                                 </a>
                             </li>
                             <li class="menu-item {{request()->routeIs('subject.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
@@ -178,7 +178,7 @@
                                     <span class="menu-text">{{__('Students')}}</span>
                                 </span>
                             </li>
-                            <li class="menu-item {{request()->routeIs('student.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                            <li class="menu-item {{request()->routeIs('student.index') || request()->routeIs('student.create') ? 'menu-item-active' : ''}}" aria-haspopup="true">
                                 <a href="{{route('student.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>

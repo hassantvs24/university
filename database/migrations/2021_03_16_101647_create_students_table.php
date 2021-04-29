@@ -15,80 +15,69 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('student_id',10)->unique();
+            $table->bigInteger('from_no')->unique();
+            $table->bigInteger('student_id')->unique();
             $table->string('contact', 11);
             $table->string('emergency_contact', 11)->nullable();
-            $table->string('name');
+            $table->string('name')->comment('Name in Bangla');
             $table->date('dob');
-            $table->enum('gender',['Male', 'Female', 'Other']);
+            $table->float('height')->nullable()->comment('Measure by feet');
+            $table->float('weight')->nullable()->comment('Measure by kg');
+            $table->enum('gender',['Male', 'Female', 'Not Specified']);
             $table->enum('blood_group',['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-', 'Unknown'])->default('Unknown');
             $table->enum('religion',['Islam', 'Hinduism', 'Buddhism', 'Christianity', 'Secular', 'Other']);
-            $table->float('height')->nullable();
-            $table->float('weight')->nullable();
-            $table->float('nid')->comment('Nid/Birth Certificate');
+            $table->enum('marital_status',['Single', 'Married'])->default('Single');
+            $table->string('birth_place',50)->nullable();
+            $table->string('Nationality',50)->nullable();
+            $table->string('nid',30)->comment('Nid/Birth Certificate');
+
+            $table->string('house',50)->nullable();
+            $table->string('road',50)->nullable();
+            $table->string('village',50)->comment('Village/Town')->nullable();
+            $table->string('po',50)->comment('Post office')->nullable();
+            $table->string('pc',20)->comment('Post Code')->nullable();
+            $table->string('upazilla',50)->nullable();
+            $table->string('district',50)->nullable();
+
+            $table->string('permanent_house',50)->nullable();
+            $table->string('permanent_road',50)->nullable();
+            $table->string('permanent_village',50)->comment('Village/Town')->nullable();
+            $table->string('permanent_po',50)->comment('Post office')->nullable();
+            $table->string('permanent_pc',20)->comment('Post Code')->nullable();
+            $table->string('permanent_upazilla',50)->nullable();
+            $table->string('permanent_district',50)->nullable();
+
+            $table->enum('know_about', ['Staff', 'Student', 'Friends', 'Newspaper', 'Social Medea', 'SMS', 'ADS', 'Other Source'])->nullable();
+            $table->string('rtm_student_name', 120)->nullable();
+            $table->string('rtm_student_id', 20)->nullable();
+            $table->string('rtm_staff_name', 120)->nullable();
+            $table->string('rtm_staff_id',20)->nullable();
+
+            $table->string('spoken_score')->nullable()->comment('SAT / TOFEL / IELTS / GMAT score');
+            $table->string('spoken_certificate_date')->nullable()->comment('Spoken Score Date Taken');
+
+            $table->boolean('is_expelled')->default(0)->comment('dismissed/suspended/expelled from any institution');
+            $table->string('expelled_reason')->nullable();
+
+            $table->boolean('is_job_exp')->default(0);
+            $table->string('extra_activity')->nullable()->comment('Skilled in sports and others');
+
             $table->float('waver')->default(0)->comment('Use (%)');
-            $table->string('waver_name')->nullable();
+            $table->string('description')->nullable();
 
-            $table->string('father_name');
-            $table->string('father_contact', 11)->nullable();
-            $table->string('father_email')->nullable();
-            $table->string('father_occupation')->nullable();
-            $table->string('father_nid');
-            $table->string('father_photo')->nullable();
+            $table->boolean('is_approved_dean')->default(0);
+            $table->date('dean_sign_date')->nullable();
+            $table->boolean('is_approved_register')->default(0);
+            $table->date('register_sign_date')->nullable();
+            $table->boolean('is_approved_admission')->default(0);
+            $table->date('admission_sign_date')->nullable();
 
-            $table->string('mother_name');
-            $table->string('mother_contact', 11)->nullable();
-            $table->string('mother_email')->nullable();
-            $table->string('mother_occupation')->nullable();
-            $table->string('mother_nid');
-            $table->string('mother_photo')->nullable();
+            $table->enum('admission_in',['Spring', 'Fall', 'Winter']);
 
-            $table->string('guardian_name')->nullable();
-            $table->string('guardian_contact', 11)->nullable();
-            $table->string('guardian_email')->nullable();
-            $table->string('guardian_occupation')->nullable();
-            $table->string('guardian_nid')->nullable();
-            $table->string('guardian_photo')->nullable();
-
-            $table->string('address');
-            $table->string('city')->comment('City/Village');
-            $table->string('zip')->nullable();
-            $table->string('state')->nullable();
-            $table->string('district')->nullable();
-            $table->string('sub_district')->nullable();
-            $table->string('country')->default('Bangladesh')->nullable();
-
-            $table->string('ssc_roll',20)->nullable();
-            $table->string('ssc_reg',20)->nullable();
-            $table->year('ssc_year')->nullable();
-            $table->string('ssc_division',15)->nullable();
-            $table->float('ssc_point')->nullable();
-            $table->string('ssc_grade', 2)->nullable();
-            $table->string('ssc_certificate')->nullable();
-            $table->string('ssc_mark_sheet')->nullable();
-            $table->string('ssc_testimonial')->nullable();
-
-            $table->string('hsc_roll',20)->nullable();
-            $table->string('hsc_reg',20)->nullable();
-            $table->year('hsc_year')->nullable();
-            $table->string('hsc_division',15)->nullable();
-            $table->float('hsc_point')->nullable();
-            $table->string('hsc_grade', 2)->nullable();
-            $table->string('hsc_certificate')->nullable();
-            $table->string('hsc_mark_sheet')->nullable();
-            $table->string('hsc_testimonial')->nullable();
-
-            $table->string('doc_one_title')->nullable();
-            $table->string('doc_one_file')->nullable();
-            $table->string('doc_two_title')->nullable();
-            $table->string('doc_two_file')->nullable();
-            $table->string('doc_three_title')->nullable();
-            $table->string('doc_three_file')->nullable();
-
-            $table->enum('status',['Active', 'Inactive'])->default('Active');
+            $table->enum('status',['Active', 'Inactive', 'Pending'])->default('Active');
             $table->enum('register_type',['Normal', 'Uploaded'])->default('Normal');
             $table->foreignId('user_categories_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
-            $table->foreignId('course_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
+            $table->foreignId('course_id')->nullable()->comment('Program Name')->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('section_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('waver_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('batches_id')->constrained()->onDelete('cascade')->onUpdate('No Action');

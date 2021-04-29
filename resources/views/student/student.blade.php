@@ -10,7 +10,7 @@
         <div class="col">
             <x-card label="{{__('Student List')}}">
                 <x-slot name="button">
-                    <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#addModal"><i class="flaticon2-add-1"></i> {{__('Add new record')}}</button>
+                    <a class="btn btn-primary ml-1" href="{{route('student.create')}}"><i class="flaticon2-add-1"></i> {{__('Add new record')}}</a>
                 </x-slot>
                 <table class="table table-separate table-head-custom table-sm table-striped" id="kt_datatable">
                     <thead>
