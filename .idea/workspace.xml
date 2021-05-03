@@ -20,21 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/StudentAcademic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/StudentDocument.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/StudentGuardian.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/StudentJobExp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_060821_create_student_academics_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_061824_create_student_job_exps_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_061838_create_student_documents_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_061949_create_student_guardians_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/box/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/box/student.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DemoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DemoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/course.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/batch.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,19 +197,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\university\app\Models" />
+      <recent name="D:\laragon\www\university\resources\views\student" />
+      <recent name="D:\laragon\www\university\resources\views\student\box" />
+      <recent name="D:\laragon\www\university\app\Http\Controllers\Student" />
+      <recent name="D:\laragon\www\university\app\Customer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\university\resources\views\student\box" />
       <recent name="D:\laragon\www\university\resources\views\settings\box" />
       <recent name="D:\laragon\www\university\public" />
       <recent name="C:\wamp64\www\university\resources\views\vendor\jetstream\components" />
       <recent name="C:\wamp64\www\university\resources\views\layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\university\resources\views\student" />
-      <recent name="D:\laragon\www\university\resources\views\student\box" />
-      <recent name="D:\laragon\www\university\app\Http\Controllers\Student" />
-      <recent name="D:\laragon\www\university\app\Models" />
-      <recent name="D:\laragon\www\university\app\Customer" />
     </key>
   </component>
   <component name="RunManager">
@@ -288,7 +279,12 @@
       <workItem from="1619328944478" duration="4554000" />
       <workItem from="1619412077242" duration="5518000" />
       <workItem from="1619690686589" duration="6486000" />
-      <workItem from="1619713217464" duration="5449000" />
+      <workItem from="1619713217464" duration="7667000" />
+      <workItem from="1619757210444" duration="9000" />
+      <workItem from="1619809179351" duration="625000" />
+      <workItem from="1619844914653" duration="4567000" />
+      <workItem from="1619984982228" duration="2492000" />
+      <workItem from="1620022972864" duration="2936000" />
     </task>
     <servers />
   </component>
@@ -315,14 +311,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="697" y="327" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618043844977" />
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618166756001">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619986041024">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618166756001" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1619417640332">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619986041024" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1619757217780">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619417640332" />
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1619757217780" />
     <state x="775" y="248" key="NewPhpClassDialog" timestamp="1618159294128">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -339,10 +335,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616929430225" />
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1616928678585">
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1620025285850">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616928678585" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620025285850" />
     <state x="616" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1616571152359">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

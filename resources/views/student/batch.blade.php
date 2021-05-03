@@ -17,7 +17,7 @@
                     <tr>
                         <th>{{__('Code')}}</th>
                         <th>{{__('Name')}}</th>
-                        <th title="{{__('Number of Semester')}}">{{__('Semester')}}</th>
+                        <th title="{{__('Price per Credit')}}">{{__('Price/Credit')}}</th>
                         <th>{{__('Department')}}</th>
                         <th title="{{__('Academic Year')}}">{{__('A.Year')}}</th>
                         <th class="text-right">{{__('Action')}}</th>
@@ -28,9 +28,9 @@
                         <tr>
                             <td>{{$row->code}}</td>
                             <td>{{$row->name}}</td>
-                            <td>{{$row->price}}</td>
+                            <td>{{$row->price}} {{__('tk')}}</td>
                             <td>{{$row->department->short_name ?? ''}}</td>
-                            <td>{{$row->academicYear->name ?? ''}}</td>
+                            <td>{{$row->academicYear->years ?? ''}}</td>
                             <td class="text-right">
                                 <x-actions>
 

@@ -2,20 +2,20 @@
 @extends('course.box.course')
 
 @section('title')
-    {{__('Course List')}}
+    {{__('Program List')}}
 @endsection
 
 @section('content')
     <div class="row">
         <div class="col">
-            <x-card label="{{__('Course List')}}">
+            <x-card label="{{__('Program List')}}">
                 <x-slot name="button">
                     <button class="btn btn-primary ml-1" data-toggle="modal" data-target="#addModal"><i class="flaticon2-add-1"></i> {{__('Add new record')}}</button>
                 </x-slot>
                 <table class="table table-separate table-head-custom table-sm table-striped" id="kt_datatable">
                     <thead>
                     <tr>
-                        <th>{{__('Course Name')}}</th>
+                        <th>{{__('Program Name')}}</th>
                         <th>{{__('Semester')}}</th>
                         <th>{{__('Offer Subject')}}</th>
                         <th>{{__('Credit Offer')}}</th>

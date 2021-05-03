@@ -3,11 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\AcademicYear;
+use App\Models\Batch;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Subject;
 use App\Models\SubjectCategories;
 use App\Models\SubjectType;
+use App\Models\UserCategory;
 use Illuminate\Database\Seeder;
 
 class DemoSeeder extends Seeder
@@ -71,10 +73,24 @@ class DemoSeeder extends Seeder
         ],['name', 'code', 'subject_categories_id'],['id']);
 
         Course::upsert([
-            ['id' => 1, 'name' => 'CSE-2020', 'semester' => 8, 'total_subject' => 46, 'total_credit' => 152, 'department_id' => 1,  'academic_year_id' => 2],
-            ['id' => 2, 'name' => 'BBA-2020', 'semester' => 8, 'total_subject' => 12, 'total_credit' => 146, 'department_id' => 4,  'academic_year_id' => 2],
-            ['id' => 3, 'name' => 'EEE-2020', 'semester' => 8, 'total_subject' => 45, 'total_credit' => 148, 'department_id' => 3,  'academic_year_id' => 2]
+            ['id' => 1, 'name' => 'Bachelor of Computer Science and Engineering', 'semester' => 8, 'total_subject' => 46, 'total_credit' => 152, 'department_id' => 1,  'academic_year_id' => 2],
+            ['id' => 2, 'name' => 'Bachelor of Business Administration', 'semester' => 8, 'total_subject' => 12, 'total_credit' => 146, 'department_id' => 4,  'academic_year_id' => 2],
+            ['id' => 3, 'name' => 'Bachelor of Electrical and Electronics Engineering', 'semester' => 8, 'total_subject' => 45, 'total_credit' => 148, 'department_id' => 3,  'academic_year_id' => 2]
         ],['name', 'department_id', 'academic_year_id'],['id']);
+
+        UserCategory::upsert([
+            ['id' => 1, 'name' => 'Regular', 'user_type' => 'Student'],
+            ['id' => 2, 'name' => 'Weekend', 'user_type' => 'Student'],
+            ['id' => 3, 'name' => 'Evening', 'user_type' => 'Student'],
+            ['id' => 4, 'name' => 'Diploma', 'user_type' => 'Student'],
+            ['id' => 5, 'name' => 'Credit Transfer', 'user_type' => 'Student'],
+        ],['name', 'user_type'],['id']);
+
+        Batch::upsert([
+            ['id' => 1, 'name' => '1st', 'code' => 10, 'price' => 1870, 'courses_id' => 1, 'department_id' => 1, 'academic_year_id' => 2],
+            ['id' => 2, 'name' => '1st', 'code' => 11, 'price' => 1560, 'courses_id' => 2, 'department_id' => 4, 'academic_year_id' => 2],
+            ['id' => 3, 'name' => '1st', 'code' => 12, 'price' => 1970, 'courses_id' => 3, 'department_id' => 3, 'academic_year_id' => 2]
+        ],['name', 'code', 'price', 'courses_id', 'department_id', 'academic_year_id'],['id']);
 
     }
 }
