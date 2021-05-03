@@ -28,7 +28,7 @@ class CreateStudentsTable extends Migration
             $table->enum('religion',['Islam', 'Hinduism', 'Buddhism', 'Christianity', 'Secular', 'Other']);
             $table->enum('marital_status',['Single', 'Married'])->default('Single');
             $table->string('birth_place',50)->nullable();
-            $table->string('Nationality',50)->nullable();
+            $table->string('nationality',50)->nullable();
             $table->string('nid',30)->comment('Nid/Birth Certificate');
 
             $table->string('house',50)->nullable();

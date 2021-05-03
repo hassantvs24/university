@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
+use App\Models\Batch;
 use App\Models\User;
+use App\Models\UserCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -19,7 +21,9 @@ class StudentController extends Controller
 
     public function create()
     {
-        return view('student.student_create');
+        $category = UserCategory::orderBy('name')->where('user_type', 'Student')->get();
+        $batch = Batch::orderBy('id', 'DESC')->get();
+        return view('student.student_create')->with(['category' => $category, 'batch' => $batch]);
     }
 
 
