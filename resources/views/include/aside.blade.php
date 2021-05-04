@@ -424,8 +424,8 @@
                                     <span class="menu-text">{{__('Designations')}}</span>
                                 </a>
                             </li>
-                            <li class="menu-item {{--request()->routeIs('roles.index') ? 'menu-item-active' : ''--}}" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                            <li class="menu-item {{request()->routeIs('waver.index') ? 'menu-item-active' : ''}}" aria-haspopup="true">
+                                <a href="{{route('waver.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>

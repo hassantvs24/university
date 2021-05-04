@@ -6,6 +6,7 @@ use App\Http\Controllers\Course\SubjectsController;
 use App\Http\Controllers\Course\SubjectTypeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Settings\AcademicYearController;
+use App\Http\Controllers\Settings\WaversController;
 use App\Http\Controllers\Student\BatchController;
 use App\Http\Controllers\Settings\DepartmentController;
 use App\Http\Controllers\Student\SectionController;
@@ -54,6 +55,7 @@ Route::prefix('admin')->group(function () {
 
         Route::resource('/settings/year', AcademicYearController::class);
         Route::resource('/settings/department', DepartmentController::class);
+        Route::resource('/settings/waver', WaversController::class);
     });
 });
 /*

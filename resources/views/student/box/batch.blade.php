@@ -14,6 +14,14 @@
                 <option value="{{$row->id}}">{{$row->code}}. {{$row->name}} ({{$row->short_name}})</option>
             @endforeach
         </x-nselect2>
+
+        <x-nselect2 label="{{__('Program')}}" class="select2" name="courses_id" required="required" >
+            <option value="">{{__('Select Program')}}</option>
+            @foreach($courses as $row)
+                <option value="{{$row->id}}">{{$row->name}} ({{$row->academicYear->years ?? ''}})</option>
+            @endforeach
+        </x-nselect2>
+
         <x-ninput label="{{__('Batch Code')}}" name="code" type="number" min="1" max="999" required="required" />
         <x-ninput label="{{__('Batch Name')}}" name="name" required="required" />
         <x-ninput label="{{__('Hourly Rate')}}" name="price" type="number" step=".5" min="0" required="required" />
@@ -35,6 +43,14 @@
                 <option value="{{$row->id}}">{{$row->code}}. {{$row->name}} ({{$row->short_name}})</option>
             @endforeach
         </x-nselect2>
+
+        <x-nselect2 label="{{__('Program')}}" class="select2" name="courses_id" required="required" >
+            <option value="">{{__('Select Program')}}</option>
+            @foreach($courses as $row)
+                <option value="{{$row->id}}">{{$row->name}} ({{$row->academicYear->years ?? ''}})</option>
+            @endforeach
+        </x-nselect2>
+
         <x-ninput label="{{__('Batch Code')}}" name="code" type="number" min="1" max="999" required="required" />
         <x-ninput label="{{__('Batch Name')}}" name="name" required="required" />
         <x-ninput label="{{__('Hourly Rate')}}" name="price" type="number" step=".5" min="0" required="required" />

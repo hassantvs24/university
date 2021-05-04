@@ -20,11 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/box/waver.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/waver.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/WaversController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/WaversController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/BatchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/BatchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_16_101647_create_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/include/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/batch.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/box/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/box/batch.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,6 +290,9 @@
       <workItem from="1619844914653" duration="4567000" />
       <workItem from="1619984982228" duration="2492000" />
       <workItem from="1620022972864" duration="12553000" />
+      <workItem from="1620038197229" duration="4111000" />
+      <workItem from="1620056691943" duration="7716000" />
+      <workItem from="1620102970892" duration="82000" />
     </task>
     <servers />
   </component>
@@ -310,22 +319,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="697" y="327" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618043844977" />
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620026739761">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620064001455">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620026739761" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1620035649849">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620064001455" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1620103051831">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620035649849" />
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620103051831" />
     <state x="775" y="248" key="NewPhpClassDialog" timestamp="1618159294128">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="775" y="248" key="NewPhpClassDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618159294128" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1618898092920">
+    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1620058097130">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618898092920" />
+    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620058097130" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1616566513319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

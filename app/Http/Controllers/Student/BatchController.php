@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Student;
 use App\Http\Controllers\Controller;
 use App\Models\AcademicYear;
 use App\Models\Batch;
+use App\Models\Course;
 use App\Models\Department;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -20,8 +21,9 @@ class BatchController extends Controller
     {
         $table = Batch::orderBy('id', 'DESC')->get();
         $academic_year = AcademicYear::orderBy('years', 'DESC')->get();
+        $courses = Course::orderBy('name')->get();
         $department = Department::orderBy('code')->get();
-        return view('student.batch')->with(['table' => $table, 'department' => $department, 'academic_year' => $academic_year]);
+        return view('student.batch')->with(['table' => $table, 'department' => $department, 'courses' => $courses, 'academic_year' => $academic_year]);
     }
 
     /**
@@ -47,7 +49,8 @@ class BatchController extends Controller
             'name' => 'required|string|max:191',
             'price' => 'required|numeric',
             'department_id' => 'required|numeric',
-            'academic_year_id' => 'required|numeric'
+            'academic_year_id' => 'required|numeric',
+            'courses_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
@@ -58,6 +61,7 @@ class BatchController extends Controller
             $table->code = $request->code;
             $table->name = $request->name;
             $table->price = $request->price;
+            $table->courses_id = $request->courses_id;
             $table->department_id = $request->department_id;
             $table->academic_year_id = $request->academic_year_id;
             $table->save();
@@ -106,7 +110,8 @@ class BatchController extends Controller
             'name' => 'required|string|max:191',
             'price' => 'required|numeric',
             'department_id' => 'required|numeric',
-            'academic_year_id' => 'required|numeric'
+            'academic_year_id' => 'required|numeric',
+            'courses_id' => 'required|numeric'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();
@@ -117,6 +122,7 @@ class BatchController extends Controller
             $table->code = $request->code;
             $table->name = $request->name;
             $table->price = $request->price;
+            $table->courses_id = $request->courses_id;
             $table->department_id = $request->department_id;
             $table->academic_year_id = $request->academic_year_id;
             $table->save();
