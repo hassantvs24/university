@@ -32,14 +32,21 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-    //    dd($request->all());
+        dd($request->all());
 
         $validator = Validator::make($request->all(), [
-            'code' => 'required|string|max:30|unique:batches,code,'.$id,
+            'email' => 'required|string|email|unique:users,email',
             'name' => 'required|string|max:191',
-            'price' => 'required|numeric',
-            'department_id' => 'required|numeric',
-            'academic_year_id' => 'required|numeric'
+            'bn_name' => 'required|string|max:191',
+            'student_id' => 'required|numeric',
+            'admission_in' => 'required|in:Spring,Fall,Winter',
+            'from_no' => 'required|numeric',
+            'user_categories_id' => 'required|numeric',
+            'dob' => 'required|date',
+            'gender' => 'required|in:Male,Female,Not Specified',
+            'contact' => 'required|string|min:11|max:11',
+            'marital_status' => 'required|in:Single,Married',
+            'spoken_certificate_date' => 'sometimes|nullable'
         ]);
 
         if ($validator->fails()) return redirect()->back()->withErrors($validator)->withInput();

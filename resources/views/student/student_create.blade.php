@@ -113,16 +113,17 @@
                     <div class="row">
                         <div class="col-md-4">
                             <x-ninput label="{{__('House')}}" name="house"/>
-                            <x-ninput label="{{__('Village/Town')}}" name="village"/>
-                            <x-ninput label="{{__('Road')}}" name="road"/>
+                            <x-ninput label="{{__('Post Office')}}" name="po"/>
+                            <x-ninput label="{{__('District')}}" name="district"/>
                         </div>
                         <div class="col-md-4">
-                            <x-ninput label="{{__('Post Office')}}" name="po"/>
+                            <x-ninput label="{{__('Road')}}" name="road"/>
                             <x-ninput label="{{__('Post Code')}}" name="pc"/>
                         </div>
                         <div class="col-md-4">
+                            <x-ninput label="{{__('Village/Town')}}" name="village"/>
                             <x-ninput label="{{__('Upazilla')}}" name="upazilla"/>
-                            <x-ninput label="{{__('District')}}" name="district"/>
+
                         </div>
                     </div>
                     <!--Present Address: End-->
@@ -132,16 +133,18 @@
                     <div class="row">
                         <div class="col-md-4">
                             <x-ninput label="{{__('House')}}" name="permanent_house"/>
-                            <x-ninput label="{{__('Village/Town')}}" name="permanent_village"/>
-                            <x-ninput label="{{__('Road')}}" name="permanent_road"/>
+                            <x-ninput label="{{__('Post Office')}}" name="permanent_po"/>
+                            <x-ninput label="{{__('District')}}" name="permanent_district"/>
+
                         </div>
                         <div class="col-md-4">
-                            <x-ninput label="{{__('Post Office')}}" name="permanent_po"/>
+                            <x-ninput label="{{__('Road')}}" name="permanent_road"/>
                             <x-ninput label="{{__('Post Code')}}" name="permanent_pc"/>
                         </div>
                         <div class="col-md-4">
+                            <x-ninput label="{{__('Village/Town')}}" name="permanent_village"/>
                             <x-ninput label="{{__('Upazilla')}}" name="permanent_upazilla"/>
-                            <x-ninput label="{{__('District')}}" name="permanent_district"/>
+
                         </div>
                     </div>
                     <!--Permanent Address: End-->
@@ -162,7 +165,7 @@
                             <x-nselect label="{{__('Given Waver (%)')}}" name="waver_id">
                                 <option value="">{{__('Select Waver')}}</option>
                                 @foreach($waver as $row)
-                                    <option value="{{$row->id}}">{{$row->name}}</option>
+                                    <option value="{{$row->id}}">{{$row->name}} ({{$row->amount}}%)</option>
                                 @endforeach
                             </x-nselect>
                         </div>
