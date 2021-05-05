@@ -32,7 +32,7 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+    //    dd($request->all());
 
         $validator = Validator::make($request->all(), [
             'code' => 'required|string|max:30|unique:batches,code,'.$id,
