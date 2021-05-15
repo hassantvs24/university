@@ -40,7 +40,7 @@
 
                         <div class="col-md-4">
                             <x-ninput label="{{__('Photo')}}" type="file" name="photo" accept="image/*" required="required" />
-                            <x-nselect2 label="{!!  __('Batch') !!}" id="batch" class="select2" name="user_categories_id" required="required" >
+                            <x-nselect2 label="{!!  __('Batch') !!}" id="batch" class="select2" name="batches_id" required="required" >
                                 <option value="">{{__('Select Program & Batch')}}</option>
                                 @foreach($batch as $row)
                                     <option

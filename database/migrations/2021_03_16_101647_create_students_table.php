@@ -31,6 +31,8 @@ class CreateStudentsTable extends Migration
             $table->string('nationality',50)->nullable();
             $table->string('nid',30)->comment('Nid/Birth Certificate');
 
+            $table->string('institute')->nullable();
+
             $table->string('house',50)->nullable();
             $table->string('road',50)->nullable();
             $table->string('village',50)->comment('Village/Town')->nullable();
