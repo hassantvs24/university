@@ -63,6 +63,7 @@ class StudentController extends Controller
             $user->name = $request->name;
             $user->email = $request->email;
             $user->user_type = 'Student';
+            $table->institute = $request->institute;
             $user->password = date('dmY', strtotime($request->dob));//Default Password Based on date of birth
 
             if ($request->has('photo')) {
@@ -88,7 +89,6 @@ class StudentController extends Controller
             $table->contact = $request->contact;
             $table->student_id = $request->student_id;
             $table->from_no = $request->from_no;
-            $table->institute = $request->institute;
             $table->admission_in = $request->admission_in;
             $table->user_categories_id = $request->user_categories_id;
             $table->batches_id = $request->batches_id;
