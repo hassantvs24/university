@@ -116,7 +116,7 @@ class StudentController extends Controller
             $table->rtm_student_name = $request->rtm_student_name;
             $table->rtm_student_id = $request->rtm_student_id;
             $table->spoken_score = $request->spoken_score;
-            $table->spoken_certificate_date = Carbon::parse($request->spoken_certificate_date)->format('Y-m-d');;
+            $table->spoken_certificate_date = Carbon::parse($request->spoken_certificate_date)->format('Y-m-d');
             $table->rtm_staff_name = $request->rtm_staff_name;
             $table->rtm_staff_id = $request->rtm_staff_id;
             $table->extra_activity = $request->extra_activity;

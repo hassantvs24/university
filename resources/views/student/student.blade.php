@@ -15,14 +15,18 @@
                 <table class="table table-separate table-head-custom table-sm table-striped" id="kt_datatable">
                     <thead>
                     <tr>
+                        <th>{{__('ID')}}</th>
                         <th>{{__('Name')}}</th>
+                        <th>{{__('Dob')}}</th>
                         <th class="text-right">{{__('Action')}}</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($table as $row)
                         <tr>
+                            <td>{{$row->id}}</td>
                             <td>{{$row->name}}</td>
+                            <td>{{pub_date($row->student->dob ?? '')}}</td>
                             <td class="text-right">
                                 <x-actions>
 
