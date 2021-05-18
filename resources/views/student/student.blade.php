@@ -15,6 +15,7 @@
                 <table class="table table-separate table-head-custom table-sm table-striped" id="kt_datatable">
                     <thead>
                     <tr>
+                        <th>{{__('Photo')}}</th>
                         <th>{{__('ID')}}</th>
                         <th>{{__('Name')}}</th>
                         <th>{{__('Dob')}}</th>
@@ -24,7 +25,12 @@
                     <tbody>
                     @foreach($table as $row)
                         <tr>
-                            <td>{{$row->id}}</td>
+                            <td>
+                                <div class="symbol symbol-20 symbol-lg-30 symbol-circle mr-3 overflow-hidden">
+                                    <img alt="{{$row->name}}" src="{{asset($row->photo)}}" />
+                                </div>
+                            </td>
+                            <td>{{$row->student->student_id ?? ''}}</td>
                             <td>{{$row->name}}</td>
                             <td>{{pub_date($row->student->dob ?? '')}}</td>
                             <td class="text-right">

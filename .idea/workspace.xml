@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uploads/user/mahadi-walid_1621277868.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,26 +188,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gunproject" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\university\app" />
-      <recent name="D:\laragon\www\university\resources\views\student\box" />
-      <recent name="D:\laragon\www\university\resources\views\settings\box" />
-      <recent name="D:\laragon\www\university\public" />
-      <recent name="C:\wamp64\www\university\resources\views\vendor\jetstream\components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\laragon\www\university\app\Models" />
       <recent name="D:\laragon\www\university\resources\views\student" />
       <recent name="D:\laragon\www\university\resources\views\student\box" />
       <recent name="D:\laragon\www\university\app\Http\Controllers\Student" />
       <recent name="D:\laragon\www\university\app\Customer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\university\app" />
+      <recent name="D:\laragon\www\university\resources\views\student\box" />
+      <recent name="D:\laragon\www\university\resources\views\settings\box" />
+      <recent name="D:\laragon\www\university\public" />
+      <recent name="C:\wamp64\www\university\resources\views\vendor\jetstream\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -292,6 +295,9 @@
       <workItem from="1620707455148" duration="197000" />
       <workItem from="1621056399542" duration="3632000" />
       <workItem from="1621061281054" duration="30000" />
+      <workItem from="1621242841673" duration="27000" />
+      <workItem from="1621275962105" duration="8028000" />
+      <workItem from="1621319618452" duration="80000" />
     </task>
     <servers />
   </component>
@@ -322,10 +328,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620064001455" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1620707651797">
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1621319697160">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620707651797" />
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1621319697160" />
     <state x="775" y="248" key="NewPhpClassDialog" timestamp="1618159294128">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -350,5 +356,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="178" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616571152359" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/student/student.blade.php</url>
+          <line>39</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

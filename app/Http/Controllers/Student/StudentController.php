@@ -43,7 +43,7 @@ class StudentController extends Controller
             'bn_name' => 'required|string|max:191',
             'student_id' => 'required|string|min:10|max:10|unique:students,student_id',
             'admission_in' => 'required|in:Spring,Fall,Winter',
-            'from_no' => 'required|numeric',
+            'from_no' => 'required|numeric|unique:students,from_no',
             'user_categories_id' => 'required|numeric',
             'dob' => 'required|date',
             'gender' => 'required|in:Male,Female,Not Specified',
@@ -63,7 +63,7 @@ class StudentController extends Controller
             $user->name = $request->name;
             $user->email = $request->email;
             $user->user_type = 'Student';
-            $table->institute = $request->institute;
+            $user->institute = $request->institute;
             $user->password = date('dmY', strtotime($request->dob));//Default Password Based on date of birth
 
             if ($request->has('photo')) {
