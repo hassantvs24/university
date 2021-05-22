@@ -32,7 +32,7 @@
                             </td>
                             <td>{{$row->student->student_id ?? ''}}</td>
                             <td>{{$row->name}}</td>
-                            <td>{{pub_date($row->student->dob ?? '')}}</td>
+                            <td>{{ Carbon::parse($row->student->dob)->format('d/m/Y') ?? '' }}</td>
                             <td class="text-right">
                                 <x-actions>
 
