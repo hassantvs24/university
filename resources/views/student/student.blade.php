@@ -38,7 +38,7 @@
 
                                     <li class="navi-item">
                                         <a href="javascript:;" class="navi-link" data-toggle="modal" data-target="#ediModal" onclick="ediFn(this)"
-                                           data-href="{{route('student.category.update', ['category' => $row->id])}}"
+                                           data-href="{{route('student.update', ['student' => $row->id])}}"
                                            data-name="{{$row->name}}"
                                         >
                                             <span class="navi-icon"><i class="la la-pencil-square-o text-success"></i></span>
@@ -47,7 +47,7 @@
                                     </li>
 
                                     <li class="navi-item">
-                                        <a href="javascript:;" data-href="{{route('student.category.destroy', ['category' => $row->id])}}" class="navi-link" onclick="delFn(this)">
+                                        <a href="javascript:;" data-href="{{route('student.destroy', ['student' => $row->id])}}" class="navi-link" onclick="delFn(this)">
                                             <span class="navi-icon"><i class="la la-trash-o text-danger"></i></span>
                                             <span class="navi-text">{{__('Delete')}}</span>
                                         </a>
