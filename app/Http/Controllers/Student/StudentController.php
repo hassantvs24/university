@@ -165,6 +165,11 @@ class StudentController extends Controller
 
     public function destroy($id)
     {
-        //
+        try{
+            User::destroy($id);
+        }catch (\Exception $ex) {
+            return redirect()->back()->with(config('naz.db_error'));
+        }
+        return redirect()->back()->with(config('naz.del'));
     }
 }
