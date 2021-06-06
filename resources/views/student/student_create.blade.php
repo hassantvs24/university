@@ -25,6 +25,7 @@
                                 <option value="Fall">{{__('Fall')}}</option>
                             </x-nselect2>
                             <p><b>{{__('Program')}}: </b><span id="program"></span></p>
+                            <p><b>{{__('Year')}}: </b><span id="years"></span></p>
                         </div>
 
                         <div class="col-md-4">
@@ -47,11 +48,16 @@
                                         data-program="{{$row->course->name}}"
                                         data-department="{{$row->department->name}}"
                                         data-years="{{$row->academicYear->years}}"
+                                        data-url="{{route('admin.get_section', ['id' => $row->id])}}"
                                         value="{{$row->id}}"
                                     >{{$row->department->short_name ?? ''}} - {{$row->name}} ({{$row->course->name ?? ''}}-{{$row->academicYear->years ?? ''}})</option>
                                 @endforeach
                             </x-nselect2>
-                            <p><b>{{__('Year')}}: </b><span id="years"></span></p>
+
+                            <div id="show_section">
+                                <!-- Section Loaded -->
+                            </div>
+
                         </div>
 
                     </div>
@@ -233,6 +239,7 @@
                 var program = $(this).find(':selected').attr('data-program');
                 var department = $(this).find(':selected').attr('data-department');
                 var years = $(this).find(':selected').attr('data-years');
+                var url = $(this).find(':selected').attr('data-url');
 
                 if(batch_id != ''){
                     $('#program').html(program);
@@ -243,6 +250,10 @@
                     $('#department').html('');
                     $('#years').html('');
                 }
+
+                $.get( url, function( data ) {
+                    $( "#show_section" ).html( data );
+                });
             });
 
             $('#expelled').change(function () {

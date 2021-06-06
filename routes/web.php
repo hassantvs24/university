@@ -48,6 +48,7 @@ Route::prefix('admin')->group(function () {
         Route::delete('/course/del-subject/{id}', [CourseController::class, 'del_subject_item'])->name('course.del_subject');
         Route::resource('/course', CourseController::class);
 
+        Route::get('student/get-section/{id}', [StudentController::class, 'got_section'])->name('admin.get_section');
         Route::resource('/student/section', SectionController::class);
         Route::resource('/student/batch', BatchController::class);
         Route::resource('/student/category', StudentCategoryController::class, ['as' => 'student']);

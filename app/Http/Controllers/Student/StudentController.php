@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
 use App\Models\Batch;
+use App\Models\Section;
 use App\Models\Student;
 use App\Models\User;
 use App\Models\UserCategory;
@@ -132,8 +133,13 @@ class StudentController extends Controller
             if (isset($request->batches_id)) {
                 $table->course_id = Batch::find($request->batches_id)->course_id;
             }
+            if (isset($request->section_id)) {
+                $table->section_id = $request->section_id;
+            }
             $table->user_id = $user_id;
             $table->save();
+
+
 
         }catch (\Exception $ex) {
             DB::rollBack();
@@ -171,5 +177,11 @@ class StudentController extends Controller
             return redirect()->back()->with(config('naz.db_error'));
         }
         return redirect()->back()->with(config('naz.del'));
+    }
+
+    public function got_section($id){
+        $table = Section::orderBy('name')->where('batches_id', $id)->get();
+
+        return view('student.box.batch_section')->with(['table' => $table]);
     }
 }
