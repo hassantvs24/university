@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/media/logos/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/media/logos/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/media/logos/logo-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/media/logos/logo-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/media/logos/logo-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/media/logos/logo-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/media/logos/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/media/logos/logo.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +189,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../intranetair-new" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -308,6 +308,7 @@
       <workItem from="1623214668618" duration="382000" />
       <workItem from="1634149515389" duration="601000" />
       <workItem from="1634789497408" duration="620000" />
+      <workItem from="1635387854586" duration="1088000" />
     </task>
     <servers />
   </component>
