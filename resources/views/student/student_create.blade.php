@@ -110,6 +110,7 @@
                                 <option value="AB+">{{__('AB+')}}</option>
                                 <option value="AB-">{{__('AB-')}}</option>
                             </x-nselect>
+                            <x-ninput label="{{__('Signature Scan')}}" type="file" name="signature" accept="image/*" />
                         </div>
                     </div>
                     <!--General Info: End-->
@@ -154,6 +155,99 @@
                         </div>
                     </div>
                     <!--Permanent Address: End-->
+
+                    <!--Guardian Info: Start-->
+                    <p class="bg-success text-white"><i class="flaticon2-avatar text-white"></i> <b>{{__('Father Info')}}</b></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Name')}}" name="father_name" required="required"/>
+                            <x-ninput label="{{__('Email')}}" type="email" name="father_email"/>
+                            <x-ninput label="{{__('NID')}}" name="father_nid"/>
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Mobile')}}" name="father_contact" required="required"/>
+                            <x-ninput label="{{__('Organization')}}" name="father_organization"/>
+                            <x-ninput label="{{__('Photo')}}" type="file" name="father_photo" accept="image/*" />
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Occupation')}}" name="father_occupation"/>
+                            <x-ninput label="{{__('Address')}}" name="father_address"/>
+                        </div>
+                    </div>
+
+                    <p class="bg-success text-white"><i class="flaticon2-avatar text-white"></i> <b>{{__('Mother Info')}}</b></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Name')}}" name="mother_name" required="required"/>
+                            <x-ninput label="{{__('Email')}}" type="email" name="mother_email"/>
+                            <x-ninput label="{{__('NID')}}" name="mother_nid"/>
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Mobile')}}" name="mother_contact"/>
+                            <x-ninput label="{{__('Organization')}}" name="mother_organization"/>
+                            <x-ninput label="{{__('Photo')}}" type="file" name="mother_photo" accept="image/*" />
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Occupation')}}" name="mother_occupation"/>
+                            <x-ninput label="{{__('Address')}}" name="mother_address"/>
+                        </div>
+                    </div>
+
+                    <p class="bg-success text-white"><i class="flaticon2-avatar text-white"></i> <b>{{__('Spouse Info')}}</b></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Name')}}" name="spouse_name"/>
+                            <x-ninput label="{{__('Email')}}" type="email" name="spouse_email"/>
+                            <x-ninput label="{{__('NID')}}" name="spouse_nid"/>
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Mobile')}}" name="spouse_contact"/>
+                            <x-ninput label="{{__('Organization')}}" name="spouse_organization"/>
+                            <x-ninput label="{{__('Photo')}}" type="file" name="spouse_photo" accept="image/*" />
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Occupation')}}" name="spouse_occupation"/>
+                            <x-ninput label="{{__('Address')}}" name="spouse_address"/>
+                        </div>
+                    </div>
+
+                    <p class="bg-success text-white"><i class="flaticon2-avatar text-white"></i> <b>{{__('Local Guardian Info')}}</b></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Name')}}" name="local_name"/>
+                            <x-ninput label="{{__('Email')}}" type="email" name="local_email"/>
+                            <x-ninput label="{{__('NID')}}" name="local_nid"/>
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Mobile')}}" name="local_contact"/>
+                            <x-ninput label="{{__('Organization')}}" name="local_organization"/>
+                            <x-ninput label="{{__('Photo')}}" type="file" name="local_photo" accept="image/*" />
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Occupation')}}" name="local_occupation"/>
+                            <x-ninput label="{{__('Address')}}" name="local_address"/>
+                        </div>
+                    </div>
+
+                    <p class="bg-success text-white"><i class="flaticon2-avatar text-white"></i> <b>{{__(' Person who will pay the fees')}}</b></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Name')}}" name="payer_name"/>
+                            <x-ninput label="{{__('Email')}}" type="email" name="payer_email"/>
+                            <x-ninput label="{{__('NID')}}" name="payer_nid"/>
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Mobile')}}" name="payer_contact"/>
+                            <x-ninput label="{{__('Organization')}}" name="payer_organization"/>
+                            <x-ninput label="{{__('Annual Income')}}" type="number" min="0" name="annual_income"/>
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Occupation')}}" name="payer_occupation"/>
+                            <x-ninput label="{{__('Address')}}" name="payer_address"/>
+                            <x-ninput label="{{__('Photo')}}" type="file" name="payer_photo" accept="image/*" />
+                        </div>
+                    </div>
+                    <!--Guardian Info: End-->
 
                     <!--Other Info: Start-->
                     <p class="bg-primary text-white"><i class="flaticon2-fast-next text-white"></i> <b>{{__('Other Information')}}</b></p>

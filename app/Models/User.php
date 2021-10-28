@@ -33,6 +33,7 @@ class User extends Authenticatable
         'password',
         'user_type',
         'photo',
+        'signature',
         'institute',
         'enroll'
     ];

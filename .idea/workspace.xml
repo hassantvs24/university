@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/student/box/batch_section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,26 +189,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../intranetair-new" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\university\app\Models" />
-      <recent name="D:\laragon\www\university\resources\views\student" />
-      <recent name="D:\laragon\www\university\resources\views\student\box" />
-      <recent name="D:\laragon\www\university\app\Http\Controllers\Student" />
-      <recent name="D:\laragon\www\university\app\Customer" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\university\app" />
       <recent name="D:\laragon\www\university\resources\views\student\box" />
       <recent name="D:\laragon\www\university\resources\views\settings\box" />
       <recent name="D:\laragon\www\university\public" />
       <recent name="C:\wamp64\www\university\resources\views\vendor\jetstream\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\university\app\Models" />
+      <recent name="D:\laragon\www\university\resources\views\student" />
+      <recent name="D:\laragon\www\university\resources\views\student\box" />
+      <recent name="D:\laragon\www\university\app\Http\Controllers\Student" />
+      <recent name="D:\laragon\www\university\app\Customer" />
     </key>
   </component>
   <component name="RunManager">
@@ -302,7 +302,12 @@
       <workItem from="1621709170437" duration="758000" />
       <workItem from="1621783910066" duration="115000" />
       <workItem from="1621838683011" duration="94000" />
-      <workItem from="1622948716654" duration="2724000" />
+      <workItem from="1622948716654" duration="2983000" />
+      <workItem from="1622998211454" duration="30000" />
+      <workItem from="1623132797373" duration="14099000" />
+      <workItem from="1623214668618" duration="382000" />
+      <workItem from="1634149515389" duration="601000" />
+      <workItem from="1634789497408" duration="620000" />
     </task>
     <servers />
   </component>
@@ -325,41 +330,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="697" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618043844977">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1634790201673">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="697" y="327" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618043844977" />
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620064001455">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620064001455" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1621838775901">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1621838775901" />
-    <state x="775" y="248" key="NewPhpClassDialog" timestamp="1618159294128">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="775" y="248" key="NewPhpClassDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1618159294128" />
-    <state x="794" y="448" key="NewPhpFileDialog" timestamp="1622951294500">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="794" y="448" key="NewPhpFileDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1622951294500" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1616566513319">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="461" y="170" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616566513319" />
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1616929430225">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616929430225" />
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1620025285850">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1620025285850" />
-    <state x="616" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1616571152359">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="178" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1616571152359" />
+    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1634790201673" />
   </component>
 </project>

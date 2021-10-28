@@ -52,6 +52,19 @@ class StudentController extends Controller
             'marital_status' => 'required|in:Single,Married',
             'spoken_certificate_date' => 'sometimes|nullable|date',
             'photo' => 'required|file',
+            'signature' => 'sometimes|nullable|file',
+
+            'father_name' => 'required|string|max:191',
+            'father_contact' => 'required|string|min:11|max:11',
+            'father_photo' => 'sometimes|nullable|file',
+
+            'mother_name' => 'required|string|max:191',
+            'mother_photo' => 'sometimes|nullable|file',
+
+            'spouse_photo' => 'sometimes|nullable|file',
+            'local_photo' => 'sometimes|nullable|file',
+            'payer_photo' => 'sometimes|nullable|file',
+
             'batches_id' => 'required|numeric'
         ]);
 
@@ -80,6 +93,21 @@ class StudentController extends Controller
                 $this->uploadOne($image, $folder, 'public', $name);
                 // Set user profile image path in database to filePath
                 $user->photo = $filePath;
+            }
+
+            if ($request->has('signature')) {
+                // Get image file
+                $image = $request->file('signature');
+                // Make a image name based on user name and current timestamp
+                $name = Str::slug($request->input('name')) . '_' . time();
+                // Define folder path
+                $folder = '/uploads/signature/';
+                // Make a file path where image will be stored [ folder path + file name + file extension]
+                $filePathsig = $folder . $name . '.' . $image->getClientOriginalExtension();
+                // Upload image
+                $this->uploadOne($image, $folder, 'public', $name);
+                // Set user profile image path in database to filePath
+                $user->signature = $filePathsig;
             }
             $user->save();
 
@@ -125,7 +153,6 @@ class StudentController extends Controller
                 $table->waver_id = $request->waver_id;
                 $table->waver = Waver::find($request->waver_id)->amount ?? 0;
             }
-
             $table->know_about = $request->know_about;
             $table->is_expelled = $request->is_expelled;
             $table->expelled_reason = $request->expelled_reason;
@@ -139,7 +166,13 @@ class StudentController extends Controller
             $table->user_id = $user_id;
             $table->save();
 
+            /**
+             * Guardian Info
+             */
 
+            /**
+             * /Guardian Info
+             */
 
         }catch (\Exception $ex) {
             DB::rollBack();
