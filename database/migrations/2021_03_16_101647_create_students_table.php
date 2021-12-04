@@ -15,21 +15,23 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('from_no')->unique();
-            $table->bigInteger('student_id')->unique();
+            $table->bigInteger('from_no')->unique()->nullable();
+            $table->bigInteger('student_id')->unique()->nullable();
             $table->string('contact', 11);
             $table->string('emergency_contact', 11)->nullable();
-            $table->string('name')->comment('Name in Bangla');
+            $table->string('name')->comment('Name in Bengali');
             $table->date('dob');
             $table->float('height')->nullable()->comment('Measure by feet');
             $table->float('weight')->nullable()->comment('Measure by kg');
-            $table->enum('gender',['Male', 'Female', 'Not Specified']);
+            $table->enum('gender',['Male', 'Female', 'Unknown'])->default('Unknown');
             $table->enum('blood_group',['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-', 'Unknown'])->default('Unknown');
-            $table->enum('religion',['Islam', 'Hinduism', 'Buddhism', 'Christianity', 'Secular', 'Other']);
+            $table->enum('religion',['Islam', 'Hinduism', 'Buddhism', 'Christianity', 'Secular', 'Unknown'])->default('Unknown');
             $table->enum('marital_status',['Single', 'Married'])->default('Single');
             $table->string('birth_place',50)->nullable();
             $table->string('nationality',50)->nullable();
-            $table->string('nid',30)->comment('Nid/Birth Certificate');
+            $table->string('nid',30)->nullable()->comment('National Id Card');
+            $table->string('bc',30)->nullable()->comment('Birth Certificate');
+            $table->string('passport',30)->nullable();
 
             $table->string('institute')->nullable();
 
@@ -55,8 +57,8 @@ class CreateStudentsTable extends Migration
             $table->string('rtm_staff_name', 120)->nullable();
             $table->string('rtm_staff_id',20)->nullable();
 
-            $table->string('spoken_score')->nullable()->comment('SAT / TOFEL / IELTS / GMAT score');
-            $table->string('spoken_certificate_date')->nullable()->comment('Spoken Score Date Taken');
+            $table->string('spoken_score', 50)->nullable()->comment('SAT / TOFEL / IELTS / GMAT score');
+            $table->date('spoken_certificate_date')->nullable()->comment('Spoken Score Date Taken');
 
             $table->boolean('is_expelled')->default(0)->comment('dismissed/suspended/expelled from any institution');
             $table->string('expelled_reason')->nullable();
@@ -82,7 +84,7 @@ class CreateStudentsTable extends Migration
             $table->foreignId('course_id')->nullable()->comment('Program Name')->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('section_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('waver_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
-            $table->foreignId('batches_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
+            $table->foreignId('batches_id')->nullable()->constrained()->onDelete('Set Null')->onUpdate('No Action');
             $table->foreignId('user_id')->unique()->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->foreignId('upload_by')->nullable()->constrained('users')->onDelete('Set Null')->onUpdate('No Action');
             $table->softDeletes();

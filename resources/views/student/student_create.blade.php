@@ -14,7 +14,7 @@
                     @csrf
                     <input type="hidden" name="institute" value="University" />
                     <!--Basic Info: Start-->
-                    <p class="bg-primary text-white"><i class="flaticon2-fast-next text-white"></i> <b>{{__('Basic Info')}}</b></p>
+{{--                    <p class="bg-primary text-white"><i class="flaticon2-fast-next text-white"></i> <b>{{__('Basic Info')}}</b></p>
                     <div class="row">
 
                         <div class="col-md-4">
@@ -60,7 +60,7 @@
 
                         </div>
 
-                    </div>
+                    </div>--}}
 
                     <p class="bg-primary text-white"><i class="flaticon2-fast-next text-white"></i> <b>{{__('Primary Info')}}</b></p>
                     <div class="row">
@@ -95,7 +95,24 @@
                                 <option value="Single">{{__('Single')}}</option>
                                 <option value="Married">{{__('Married')}}</option>
                             </x-nselect>
-                            <x-ninput label="{{__('National ID')}}" name="nid"/>
+
+                            <div class="form-group">
+                                <label>{{__('NID')}}/{{__('Birth Certificate')}}/{{__('Passport')}}</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">
+                                           <select name="id_type">
+                                               <option value="Nid">{{__('Nid')}}</option>
+                                               <option value="Bc">{{__('Birth Certificate')}}</option>
+                                               <option value="Passport">{{__('Passport')}}</option>
+                                           </select>
+                                        <span></span>
+                                       </label>
+                                      </span>
+                                    </div>
+                                    <input type="text" name="id_number" class="form-control" placeholder="{{__('ID Number')}}"/>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-md-4">
@@ -262,12 +279,12 @@
                             <x-ninput label="{{__('Corporate Partner Name')}}" name="rtm_staff_name"/>
                             <x-ninput label="{{__('Corporate Partner ID')}}" name="rtm_staff_id"/>
                             <x-ninput label="{{__('Skilled in sports and others')}}" name="extra_activity"/>
-                            <x-nselect label="{{__('Given Waver (%)')}}" name="waver_id">
+    {{--                        <x-nselect label="{{__('Given Waver (%)')}}" name="waver_id">
                                 <option value="">{{__('Select Waver')}}</option>
                                 @foreach($waver as $row)
                                     <option value="{{$row->id}}">{{$row->name}} ({{$row->amount}}%)</option>
                                 @endforeach
-                            </x-nselect>
+                            </x-nselect>--}}
                         </div>
                         <div class="col-md-4">
                             <x-nselect label="{{__('Know About RTM')}}" name="know_about" >
@@ -318,17 +335,17 @@
 @endsection
 
 @section('style')
-    <link href="{{asset('assets/css/pages/wizard/wizard-2.css')}}" rel="stylesheet" type="text/css" />
+{{--    <link href="{{asset('assets/css/pages/wizard/wizard-2.css')}}" rel="stylesheet" type="text/css" />--}}
 @endsection
 
 
 @section('script')
-    <script src="{{asset('assets/js/pages/custom/wizard/wizard-2.js')}}"></script>
+{{--    <script src="{{asset('assets/js/pages/custom/wizard/wizard-2.js')}}"></script>--}}
     <script type="text/javascript">
         $(function () {
             $('.select2').select2();
 
-            $('#batch').change(function () {
+/*            $('#batch').change(function () {
                 var batch_id = $(this).val();
                 var program = $(this).find(':selected').attr('data-program');
                 var department = $(this).find(':selected').attr('data-department');
@@ -348,7 +365,7 @@
                 $.get( url, function( data ) {
                     $( "#show_section" ).html( data );
                 });
-            });
+            });*/
 
             $('#expelled').change(function () {
                 var expelled = $(this).val();
