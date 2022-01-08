@@ -22,6 +22,9 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->enum('user_type', ['Student', 'Teacher', 'Stuff', 'Admin'])->default('Student');
             $table->foreignId('current_team_id')->nullable();
+            $table->string('contact',11)->nullable();
+            $table->date('dob')->nullable();
+            $table->enum('gender', ['Male', 'Female', 'Not Specified'])->default('Not Specified');
             $table->string('photo')->default('/uploads/profile/default.jpg');
             $table->string('signature')->nullable()->comment('signature scan photo');
             $table->enum('institute', ['University', 'Diploma'])->default('University');

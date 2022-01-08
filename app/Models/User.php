@@ -35,7 +35,10 @@ class User extends Authenticatable
         'photo',
         'signature',
         'institute',
-        'enroll'
+        'enroll',
+        'contact',
+        'dob',
+        'gender'
     ];
 
     /**
