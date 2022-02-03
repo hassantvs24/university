@@ -1,0 +1,58 @@
+.tab {
+    display: none
+}
+#submitBtn{
+    display: none;
+}
+.step {
+    height: 30px;
+    width: 30px;
+    margin: 0 28px;
+    background-color: #3699ff;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    line-height: 31px;
+}
+span.step:before, span.step:after {
+    position: absolute;
+    content: '';
+    bottom: 13px;
+    height: 6px;
+    width: 44px;
+    background: #262626;
+    margin-left: 23px;
+}
+span.step:last-child::before, span.step:last-child::after {
+    height: 0;
+    width: 0;
+}
+
+.step.active {
+    opacity: 1
+}
+
+.step.finish {
+    background-color: #4CAF50
+}
+
+.all-steps {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* .check{
+    display: none;
+} */
+
+
+
+/* Multi step alter native */
+/* .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+} */
