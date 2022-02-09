@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f21637b-544b-48b6-b494-2167dca2b5b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Reports/IncomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Reports/IncomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_25_061949_create_student_guardians_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_25_061949_create_student_guardians_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/student_create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -329,6 +325,13 @@
       <workItem from="1641288524469" duration="4412000" />
       <workItem from="1641362479657" duration="97000" />
       <workItem from="1641362908543" duration="649000" />
+      <workItem from="1641928823492" duration="2453000" />
+      <workItem from="1642215572491" duration="6000" />
+      <workItem from="1642359515006" duration="1302000" />
+      <workItem from="1642404491418" duration="1569000" />
+      <workItem from="1642958448809" duration="311000" />
+      <workItem from="1643439021118" duration="31000" />
+      <workItem from="1644397218987" duration="167000" />
     </task>
     <servers />
   </component>
@@ -351,9 +354,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1641362558835">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1643439050479">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1641362558835" />
+    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1920.1032/0.0.1920.1032@0.0.1920.1032" timestamp="1643439050479" />
   </component>
 </project>

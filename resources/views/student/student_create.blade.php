@@ -9,7 +9,47 @@
     <div class="row">
         <div class="col">
             <x-card label="{{__('New Student Registration')}}">
+                <form action="{{route('student.store')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="institute" value="University" />
+                    <input type="hidden" name="user_type" value="Student" />
+                    <input type="hidden" name="enroll" value="Manual" />
 
+                    <div class="row">
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Name')}}" name="name" required="required" />
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Email')}}" type="email" name="email" required="required" />
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Birth Day')}}" type="date" name="dob" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <x-nselect label="{{__('Gender')}}" name="gender" required="required" >
+                                <option value="Male">{{__('Male')}}</option>
+                                <option value="Female">{{__('Female')}}</option>
+                                <option value="Not Specified">{{__('Not Specified')}}</option>
+                            </x-nselect>
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Photo (400 X 400 px)')}}" type="file" name="father_photo" accept="image/*" required="required" />
+                        </div>
+                        <div class="col-md-4">
+                            <x-ninput label="{{__('Signature Scan (300 X 80 px)')}}" type="file" name="signature" accept="image/*" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-right">
+                            <button type="submit" class="btn btn-lg btn-success">{{__('Next')}}</button>
+                        </div>
+                    </div>
+
+                </form>
 
 
 
