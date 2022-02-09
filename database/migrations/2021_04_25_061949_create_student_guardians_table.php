@@ -25,7 +25,7 @@ class CreateStudentGuardiansTable extends Migration
             $table->double('annual_income')->nullable();
             $table->string('nid')->nullable();
             $table->string('photo')->nullable();
-            $table->foreignId('user_id')->unique()->constrained()->onDelete('cascade')->onUpdate('No Action');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('No Action');
             $table->softDeletes();
             $table->timestamps();
         });

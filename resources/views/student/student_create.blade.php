@@ -30,14 +30,24 @@
                     <div class="tab">
                         <p class="bg-primary text-white"><i class="flaticon2-fast-next text-white"></i> <b>{{__('Primary Info')}}</b></p>
                     <div class="row">
-                        <div class="col-md-4">
-                            <x-ninput label="{{__('Student Name')}}" name="name" required="required" />
+                        <div class="col-md-3">
+                            <x-nselect label="{{__('Semester')}}" name="admission_in" required="*" title="semseterErr" id="admission_in">
+                                <option value="Spring">{{__('Spring')}}</option>
+                                <option value="Fall">{{__('Fall')}}</option>
+                                <option value="Winter">{{__('Winter')}}</option>
+                            </x-nselect>
                         </div>
-                        <div class="col-md-4">
-                            <x-ninput label="{{__('Student Email')}}" type="email" name="email" required="required" />
+                        <div class="col-md-3">
+                            <x-ninput label="{{__('Student Name')}}" name="name" id="name" title="nameErr" required="*"/>
+                            {{-- <small class="text-danger" id="nameErr"></small> --}}
                         </div>
-                        <div class="col-md-4">
-                            <x-ninput label="{{__('Student Dob')}}" type="date" name="dob" required="required" />
+                        <div class="col-md-3">
+                            <x-ninput label="{{__('Student Email')}}" type="email" name="email" id="email" title="emailErr" required="*"/>
+                            {{-- <small class="text-danger" id="emailErr"></small> --}}
+                        </div>
+                        <div class="col-md-3">
+                            <x-ninput label="{{__('Student Dob')}}" type="date" name="dob" id="dob" title="dobErr" required="*"/>
+                            {{-- <small class="text-danger" id="dobErr"></small> --}}
                         </div>
                     </div>
                     <!--Basic Info: End-->
@@ -47,21 +57,29 @@
                     <p class="bg-primary text-white"><i class="flaticon2-fast-next text-white"></i> <b>{{__('General Info')}}</b></p>
                     <div class="row">
                         <div class="col-md-4">
-                            <x-ninput label="{{__('Student Name (Bangla)')}}" name="bn_name" required="required" />
-                            <x-nselect label="{{__('Gender')}}" name="gender" required="required" >
+                            <x-ninput label="{{__('Student Name (Bangla)')}}" name="bn_name" required="*" title="bn_nameErr" id="bn_name"/>
+                            <x-nselect label="{{__('Religion')}}" name="religion" required="*" title="religionErr" id="religion">
+                                <option value="Islam">{{__('Islam')}}</option>
+                                <option value="Hinduism">{{__('Hinduism')}}</option>
+                                <option value="Unknown">{{__('Unknown')}}</option>
+                            </x-nselect>
+                            <x-nselect label="{{__('Gender')}}" name="gender" required="*" title="genderErr" id="gender">
                                 <option value="Male">{{__('Male')}}</option>
                                 <option value="Female">{{__('Female')}}</option>
-                                <option value="Not Specified">{{__('Not Specified')}}</option>
+                                <option value="Unknown">{{__('Unknown')}}</option>
                             </x-nselect>
                             <x-ninput label="{{__('Nationality')}}" name="nationality"/>
+                            <x-ninput label="{{__('Signature Scan')}}" type="file" name="signature" accept="image/*" />
                         </div>
 
                         <div class="col-md-4">
-                            <x-ninput label="{{__('Contact Number')}}" name="contact" required="required" />
-                            <x-nselect label="{{__('Marital Status')}}" name="marital_status" required="required" >
+                            <x-ninput label="{{__('Contact Number')}}" name="contact" required="*" title="contactErr" id="contact"/>
+                            <x-nselect label="{{__('Marital Status')}}" name="marital_status" required="*" title="marital_statusErr" id="marital_status">
                                 <option value="Single">{{__('Single')}}</option>
                                 <option value="Married">{{__('Married')}}</option>
                             </x-nselect>
+
+                            <x-ninput label="{{__('Height')}}" name="height" type="number" value="0" min="0" step="any"/>
 
                             <div class="form-group">
                                 <label>{{__('NID')}}/{{__('Birth Certificate')}}/{{__('Passport')}}</label>
@@ -84,7 +102,7 @@
 
                         <div class="col-md-4">
                             <x-ninput label="{{__('Birth Place')}}" name="birth_place"/>
-                            <x-nselect label="{{__('Blood Group')}}" name="blood_group" required="required" >
+                            <x-nselect label="{{__('Blood Group')}}" name="blood_group" required="required" title="blood_groupErr" id="blood_group">
                                 <option value="A+">{{__('A+')}}</option>
                                 <option value="A-">{{__('A-')}}</option>
                                 <option value="B+">{{__('B+')}}</option>
@@ -94,7 +112,8 @@
                                 <option value="AB+">{{__('AB+')}}</option>
                                 <option value="AB-">{{__('AB-')}}</option>
                             </x-nselect>
-                            <x-ninput label="{{__('Signature Scan')}}" type="file" name="signature" accept="image/*" />
+                            <x-ninput label="{{__('Weight')}}" name="weight" type="number" value="0" min="0" step="any"/>
+                            <x-ninput label="{{__('Photo')}}" type="file" name="photo" accept="image/*" />
                         </div>
                     </div>
                     <!--General Info: End-->

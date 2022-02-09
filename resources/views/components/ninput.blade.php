@@ -2,6 +2,7 @@
 
     @php
         $set_id = $id ??  mt_rand();
+        $err_id = $title ??  mt_rand();
     @endphp
 
     <label for="{{$set_id}}">{{$label}} {!! isset($required) ? '<span class="text-danger">*</span>':'' !!}</label>
@@ -30,6 +31,8 @@
                 @endif
             @endif
     />
+
+    <span class="form-text text-danger" id="{{ $err_id }}"></span>
 
     @if(isset($name))
         @error($name)
